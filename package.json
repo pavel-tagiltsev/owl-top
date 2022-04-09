@@ -2,10 +2,26 @@
   "name": "bolierplate",
   "version": "1.0.0",
   "description": "gulp + webpack bolierplate",
-  "main": "index.js",
+  "main": "gulpfile.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "gulp"
   },
   "author": "pavel.tagiltsev <pavel.tagiltsef@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.27.9",
+    "editorconfig": "^0.15.3",
+    "gulp": "^4.0.2",
+    "gulp-if": "^3.0.0",
+    "gulp-load-plugins": "^2.0.7",
+    "gulp-newer": "^1.4.0",
+    "gulp-notify": "^4.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-pug": "^5.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.1.3",
+    "pug": "^3.0.2"
+  }
 }

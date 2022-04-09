@@ -1,6 +1,6 @@
 export default () => {
 	const { src, dest } = app.gulp
-	const { plumber, notify, pug } = app.plugins
+	const { plumber, notify, pug, browserSync } = app.plugins
 
 	return src(app.path.src.pug)
 		.pipe(plumber(
@@ -11,4 +11,5 @@ export default () => {
 		))
 		.pipe(pug({ pretty: app.isDev} ))
 		.pipe(dest('build'))
+    .pipe(browserSync.stream())
 }

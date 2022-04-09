@@ -11,9 +11,12 @@ global.app = {
 }
 
 import pug from './gulp/tasks/pug.js'
+import server from './gulp/tasks/server.js'
 
 function watcher() {
   gulp.watch(path.watch.pug, pug)
 }
 
-gulp.task('default', watcher)
+const dev = gulp.parallel(watcher, server)
+
+gulp.task('default', dev)

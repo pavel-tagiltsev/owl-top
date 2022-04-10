@@ -18,7 +18,6 @@ export default {
     pug: `${srcFolder}/**/*.pug`,
     scss: `${srcFolder}/styles/**/*.scss`,
   },
-  clean: distFolder,
   distFolder,
   srcFolder,
   rootFolder,

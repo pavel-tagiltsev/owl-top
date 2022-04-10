@@ -10,7 +10,7 @@ export default {
     pug: `${distFolder}/`
   },
   src: {
-    pug: `${srcFolder}/*.pug`,
+    pug: `${srcFolder}/view/pages/*.pug`,
   },
   watch: {
     pug: `${srcFolder}/**/*.pug`,

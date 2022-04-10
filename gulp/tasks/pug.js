@@ -1,6 +1,8 @@
+import pug from 'gulp-pug' // Компиляция pug в html
+
 export default () => {
 	const { src, dest } = app.gulp
-	const { plumber, notify, pug, browserSync } = app.plugins
+	const { plumber, notify, browserSync } = app.plugins
 
 	return src(app.path.src.pug)
 		.pipe(plumber(

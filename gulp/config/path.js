@@ -22,7 +22,8 @@ export default {
     svg: `${srcFolder}/images/**/*.svg`,
     files: `${srcFolder}/files/**/*.*`,
     fonts: `${srcFolder}/fonts/`,
-    fontStyle: `${srcFolder}/styles/base/fonts.scss`
+    fontStyle: `${srcFolder}/styles/base/fonts.scss`,
+    svgSprite: `${srcFolder}/svgSprite/*.svg`,
   },
   watch: {
     pug: `${srcFolder}/**/*.pug`,

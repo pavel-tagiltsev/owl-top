@@ -18,6 +18,7 @@ import images from './gulp/tasks/images.js'
 import js from './gulp/tasks/js.js'
 import files from './gulp/tasks/files.js'
 import zip from './gulp/tasks/zip.js'
+import svgSprite from './gulp/tasks/svgSprite.js'
 import {otfToTtf, ttfToWoff, transferWoff, fontStyle } from './gulp/tasks/fonts.js'
 
 function watcher() {
@@ -38,5 +39,6 @@ const build = gulp.series(reset, mainTasks)
 
 export { build }
 export { deployZIP }
+export { svgSprite }
 
 gulp.task('default', dev)

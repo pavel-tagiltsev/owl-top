@@ -5,8 +5,8 @@
   "main": "gulpfile.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "gulp"
+    "dev": "gulp",
+    "build": "gulp build --build"
   },
   "author": "pavel.tagiltsev <pavel.tagiltsef@gmail.com>",
   "license": "ISC",
@@ -23,6 +23,7 @@
     "gulp": "^4.0.2",
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^8.0.0",
     "gulp-newer": "^1.4.0",
     "gulp-notify": "^4.0.0",
     "gulp-plumber": "^1.2.1",
@@ -32,6 +33,7 @@
     "gulp-replace": "^1.1.3",
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
+    "gulp-webp": "^4.0.1",
     "postcss-csso": "^6.0.0",
     "pug": "^3.0.2",
     "sass": "^1.50.0"

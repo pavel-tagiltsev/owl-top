@@ -1,15 +1,31 @@
 {
-  "name": "bolierplate",
+  "name": "gulp-bolierplate",
   "version": "1.0.0",
   "description": "gulp + webpack bolierplate",
   "main": "gulpfile.js",
   "type": "module",
   "scripts": {
     "dev": "gulp",
-    "build": "gulp build --build"
+    "build": "gulp build --build",
+    "zip": "gulp deployZIP --build",
+    "deploy": "gulp deployFTP --build",
+    "svgSprive": "gulp svgSprive"
   },
   "author": "pavel.tagiltsev <pavel.tagiltsef@gmail.com>",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pavel-tagiltsev/gulp-bolierplate.git"
+  },
+  "keywords": [
+    "gulp",
+    "webpack",
+    "js",
+    "css",
+    "scss",
+    "html",
+    "bolierplate"
+  ],
   "browserslist": [
     "last 3 versions",
     "not dead",

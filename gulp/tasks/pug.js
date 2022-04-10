@@ -12,6 +12,6 @@ export default () => {
 			})
 		))
 		.pipe(pug({ pretty: app.isDev} ))
-		.pipe(dest('build'))
+		.pipe(dest(app.path.build.html))
     .pipe(browserSync.stream())
 }

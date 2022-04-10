@@ -12,11 +12,13 @@ global.app = {
 
 import pug from './gulp/tasks/pug.js'
 import server from './gulp/tasks/server.js'
+import scss from './gulp/tasks/scss.js'
 
 function watcher() {
   gulp.watch(path.watch.pug, pug)
+  gulp.watch(path.watch.scss, scss)
 }
 
-const dev = gulp.parallel(watcher, server)
+const dev = gulp.series(pug, scss, gulp.parallel(watcher, server))
 
 gulp.task('default', dev)

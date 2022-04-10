@@ -7,13 +7,16 @@ const ftpFolder = 'test'
 
 export default {
   build: {
-    pug: `${distFolder}/`
+    html: `${distFolder}/`,
+    css: `${distFolder}/css/`,
   },
   src: {
     pug: `${srcFolder}/view/pages/*.pug`,
+    scss: `${srcFolder}/styles/index.scss`,
   },
   watch: {
     pug: `${srcFolder}/**/*.pug`,
+    scss: `${srcFolder}/styles/**/*.scss`,
   },
   clean: distFolder,
   distFolder,

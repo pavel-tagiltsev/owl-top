@@ -2,9 +2,12 @@ block varaiables
 
 html(lang='en')
   head
-    meta(charset="utf-8")
+    meta(charset='utf-8')
     title= title
+    link(href='../css/style.min.css' rel='stylesheet')
   body
     include partials/header.pug
 
       h1= title
+
+      block content

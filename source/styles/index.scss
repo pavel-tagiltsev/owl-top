@@ -1,4 +1,6 @@
 @import './base/base.scss';
+// Файл создается автоматически после добавления шрифтов в папку source/fonts
+@import './base/fonts.scss';
 @import './pages/index/home.scss';
 @import './pages/about/about.scss';
 

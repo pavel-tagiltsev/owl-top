@@ -12,6 +12,7 @@ export default {
     js: `${distFolder}/js/`,
     images: `${distFolder}/images/`,
     files: `${distFolder}/files/`,
+    fonts: `${distFolder}/fonts/`,
   },
   src: {
     pug: `${srcFolder}/view/pages/*.pug`,
@@ -20,6 +21,8 @@ export default {
     images: `${srcFolder}/images/**/*.{jpg,jpeg,png,gif,webp}`,
     svg: `${srcFolder}/images/**/*.svg`,
     files: `${srcFolder}/files/**/*.*`,
+    fonts: `${srcFolder}/fonts/`,
+    fontStyle: `${srcFolder}/styles/base/fonts.scss`
   },
   watch: {
     pug: `${srcFolder}/**/*.pug`,

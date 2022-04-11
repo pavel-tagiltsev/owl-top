@@ -14,7 +14,7 @@ export default () => {
     ))
     .pipe(webpack({
       mode: isBuild ? 'production' : 'development',
-      output: { filename: 'app.min.js' }
+      output: { filename: 'scripts.min.js' }
     }))
     .pipe(dest(app.path.build.js))
     .pipe(browserSync.stream())

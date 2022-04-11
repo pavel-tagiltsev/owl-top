@@ -1,8 +1,9 @@
-import pug from 'gulp-pug' // Компиляция pug в html
+import pug from 'gulp-pug'
+import webpHtmlNosvg from 'gulp-webp-html-nosvg'
 
 export default () => {
 	const { src, dest } = app.gulp
-	const { plumber, notify, browserSync } = app.plugins
+	const { plumber, notify, browserSync, gulpIf, replace } = app.plugins
 
 	return src(app.path.src.pug)
 		.pipe(plumber(
@@ -12,6 +13,8 @@ export default () => {
 			})
 		))
 		.pipe(pug({ pretty: app.isDev} ))
+    .pipe(replace(/@img\//g, 'images/'))
+    .pipe(gulpIf(app.isBuild, webpHtmlNosvg()))
 		.pipe(dest(app.path.build.html))
     .pipe(browserSync.stream())
 }

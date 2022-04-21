@@ -3,11 +3,11 @@ import path from './gulp/config/path.js'
 import plugins from './gulp/config/plugins.js'
 
 global.app = {
-	isBuild: process.argv.includes('--build'),
+  isBuild: process.argv.includes('--build'),
   isDev: !process.argv.includes('--build'),
-	gulp,
-	path,
-	plugins
+  gulp,
+  path,
+  plugins
 }
 
 import pug from './gulp/tasks/pug.js'

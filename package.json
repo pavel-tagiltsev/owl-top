@@ -9,7 +9,9 @@
     "build": "gulp build --build",
     "zip": "gulp deployZIP --build",
     "deploy": "gulp deployFTP --build",
-    "svgSprive": "gulp svgSprive"
+    "svgSprive": "gulp svgSprive",
+    "eclint": "npx eclint check ./",
+    "stylelint": "npx stylelint ./"
   },
   "author": "pavel.tagiltsev <pavel.tagiltsef@gmail.com>",
   "license": "ISC",
@@ -35,7 +37,9 @@
     "autoprefixer": "^10.4.4",
     "browser-sync": "^2.27.9",
     "del": "^6.0.0",
+    "eclint": "^2.8.1",
     "editorconfig": "^0.15.3",
+    "eslint": "^8.13.0",
     "fs": "^0.0.1-security",
     "gulp": "^4.0.2",
     "gulp-fonter": "^0.3.0",
@@ -57,8 +61,13 @@
     "gulp-webp-html-nosvg": "^1.0.6",
     "gulp-zip": "^5.1.0",
     "postcss-csso": "^6.0.0",
+    "prettier": "^2.6.2",
     "pug": "^3.0.2",
     "sass": "^1.50.0",
+    "stylelint": "^14.7.1",
+    "stylelint-config-htmlacademy": "^0.1.12",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-order": "^5.0.0",
     "webpack-stream": "^7.0.0"
   }
 }

@@ -1,13 +1,13 @@
 import dartSass from 'sass'
 import gulpSass from 'gulp-sass'
 
-import csso from 'postcss-csso' // Сжатие CSS файла
-import postcss from 'gulp-postcss' // Для обработки CSS
-import autoprefixer from 'autoprefixer' // Добавление вендорных префиксов
-import sourcemaps from 'gulp-sourcemaps' // Создание sourcemaps
-import groupCssMediaQueries from 'gulp-group-css-media-queries' // Группировка медиа запросов
+import csso from 'postcss-csso'
+import postcss from 'gulp-postcss'
+import autoprefixer from 'autoprefixer'
+import sourcemaps from 'gulp-sourcemaps'
+import groupCssMediaQueries from 'gulp-group-css-media-queries'
 
-const sass = gulpSass(dartSass) // Преобразование CSCC в CSS
+const sass = gulpSass(dartSass)
 
 export default () => {
   const {isDev, isBuild} = app

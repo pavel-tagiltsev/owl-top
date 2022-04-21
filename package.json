@@ -10,8 +10,10 @@
     "zip": "gulp deployZIP --build",
     "deploy": "gulp deployFTP --build",
     "svgSprive": "gulp svgSprive",
-    "eclint": "npx eclint check ./",
-    "stylelint": "npx stylelint ./"
+    "eclint": "eclint check \"**/*.*\"",
+    "stylelint": "stylelint \"source/**/*.scss\"",
+    "prettier": "prettier --check \"**/*.*\"",
+    "--check": "npm run eclint & npm run stylelint & npm run prettier"
   },
   "author": "pavel.tagiltsev <pavel.tagiltsef@gmail.com>",
   "license": "ISC",
@@ -34,6 +36,7 @@
     "not ie <= 11"
   ],
   "devDependencies": {
+    "@prettier/plugin-pug": "^2.0.0",
     "autoprefixer": "^10.4.4",
     "browser-sync": "^2.27.9",
     "del": "^6.0.0",

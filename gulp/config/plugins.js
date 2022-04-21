@@ -1,10 +1,10 @@
-import replace from 'gulp-replace' // Поиск и замена
-import plumber from 'gulp-plumber' // Обработка ошибок
-import notify from 'gulp-notify' // Сообщения (подсказки)
-import browserSync from 'browser-sync' // Локальный сервер
-import newer from 'gulp-newer' // Проверка обновления
-import gulpIf from 'gulp-if' // Условное ветление
-import rename from 'gulp-rename' // Переименование файлов
+import replace from 'gulp-replace'
+import plumber from 'gulp-plumber'
+import notify from 'gulp-notify'
+import browserSync from 'browser-sync'
+import newer from 'gulp-newer'
+import gulpIf from 'gulp-if'
+import rename from 'gulp-rename'
 
 export default {
   replace,

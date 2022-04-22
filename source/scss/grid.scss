@@ -12,19 +12,19 @@
   background-color: $page-color;
 }
 
-.aside {
+.grid__aside {
   grid-area: aside;
 
   background-color: rgb(120, 158, 204);
 }
 
-.main {
+.grid__main {
   grid-area: main;
 
   background-color: rgb(232, 151, 151);
 }
 
-.footer {
+.grid__footer {
   grid-area: footer;
   min-height: 50px;
 

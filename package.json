@@ -72,5 +72,8 @@
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-order": "^5.0.0",
     "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
   }
 }

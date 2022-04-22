@@ -1,2 +1,5 @@
-@import './base.scss'; // Файл создается автоматически после добавления шрифтов в папку source/fonts и сборки проекта
+@import 'normalize';
+
+// Файл создается автоматически после добавления шрифтов в папку source/fonts и сборки проекта
+@import './base.scss';
 // @import "./scss/fonts.scss";

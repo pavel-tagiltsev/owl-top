@@ -25,7 +25,12 @@ export default () => {
     )
     .pipe(gulpIf(isDev, sourcemaps.init()))
     .pipe(replace(/@img\//g, '../images/'))
-    .pipe(sass({outputStyle: 'expanded'}))
+    .pipe(
+      sass({
+        includePaths: ['./node_modules/normalize.css/'],
+        outputStyle: 'expanded'
+      })
+    )
     .pipe(gulpIf(isBuild, groupCssMediaQueries()))
     .pipe(gulpIf(isBuild, postcss([autoprefixer()])))
     .pipe(gulpIf(isBuild, dest(app.path.build.css)))

@@ -9,7 +9,7 @@
     "build": "gulp build --build",
     "zip": "gulp deployZIP --build",
     "deploy": "gulp deployFTP --build",
-    "svgSprive": "gulp svgSprive",
+    "svgSprite": "gulp svgSprite",
     "eclint": "eclint check \"**/*.*\"",
     "stylelint": "stylelint \"source/**/*.scss\"",
     "prettier": "prettier --check \"**/*.*\"",
@@ -37,6 +37,7 @@
   ],
   "devDependencies": {
     "@prettier/plugin-pug": "^2.0.0",
+    "@prettier/plugin-xml": "^2.1.0",
     "autoprefixer": "^10.4.4",
     "browser-sync": "^2.27.9",
     "del": "^6.0.0",

@@ -17,13 +17,12 @@ export default () => {
     .pipe(
       svgSprite({
         mode: {
+          symbol: true,
           stack: {
-            sprite: `../icons/icons.svg`,
-            // Создавать страницу с перечнем иконок
             example: true
           }
         }
       })
     )
-    .pipe(dest(build.images))
+    .pipe(dest(build.svgSprite))
 }

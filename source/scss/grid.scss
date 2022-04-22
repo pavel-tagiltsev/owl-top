@@ -1,0 +1,32 @@
+.grid {
+  display: grid;
+
+  grid-column-gap: 30px;
+  grid-template-areas:
+    ". aside main ."
+    "footer footer footer footer";
+  grid-template-rows: 1fr auto;
+  grid-template-columns: 1fr 230px minmax(320px, 1200px) 1fr;
+  height: 100vh;
+
+  background-color: $page-color;
+}
+
+.aside {
+  grid-area: aside;
+
+  background-color: rgb(120, 158, 204);
+}
+
+.main {
+  grid-area: main;
+
+  background-color: rgb(232, 151, 151);
+}
+
+.footer {
+  grid-area: footer;
+  min-height: 50px;
+
+  background-color: rgb(152, 208, 126);
+}

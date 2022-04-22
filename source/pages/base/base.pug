@@ -9,10 +9,6 @@ html(lang='ru')
     title= title
     link(href='css/styles.min.css', rel='stylesheet')
   body
-    include ../partials/aside.pug
-
-    h1= title
-
-    block content
+    block layout
 
     script(src='js/scripts.min.js')

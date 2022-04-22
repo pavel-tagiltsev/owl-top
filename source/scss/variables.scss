@@ -1,0 +1,26 @@
+$black: #000000;
+$green: #68b738;
+$green-2: #5eaa2f;
+$dark_green: #65a93c;
+$white: #ffffff;
+$grey: #e6e6e6;
+
+$font-base: "Arial", sans-serif;
+$font-secondary: "Oswald", "Tahoma", sans-serif;
+
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1300px;
+
+$dpi: 144dpi;
+$dppx: 1.5dppx;
+
+$tablet: "min-width: #{$tablet-width}";
+$desktop: "min-width: #{$desktop-width}";
+
+$retina-dpi: "min-resolution: #{$dpi}";
+$retina-dppx: "min-resolution: #{$dppx}";
+
+$mobiles-paddings: 20px;
+$tablets-paddings: 30px;
+$desktops-paddings: 40px;

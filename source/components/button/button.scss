@@ -18,43 +18,43 @@
 }
 
 .button--primary {
-  color: $light-text;
+  color: $white-primary;
 
   background-color: $primary;
 
 
   & > .button__icon > svg {
-    fill: $light-text;
+    fill: $white-primary;
   }
 
   &:hover,
   &:focus {
-    background-color: $button-primary-hover-color;
+    background-color: $primary-hover;
   }
 
   &:active {
-    background-color: $button-primary-active-color;
+    background-color: $primary-active;
   }
 }
 
 .button--ghost {
-  color: $button-ghost-text-color;
+  color: $gray-primary;
 
-  background-color: $light-text;
+  background-color: $white-primary;
   border: 1px solid $button-ghost-border-color;
 
   & > .button__icon > svg {
-    fill: $button-ghost-text-color;
+    fill: $gray-primary;
   }
 
   &:hover,
   &:focus {
-    color: $light-text;
+    color: $white-primary;
 
     background-color: $primary;
 
     & > .button__icon > svg {
-      fill: $light-text;
+      fill: $white-primary;
     }
   }
 

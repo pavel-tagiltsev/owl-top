@@ -1,41 +1,21 @@
 $primary: #7653fc;
+$primary-hover: #5f40de;
+$primary-active: #472abb;
+
+$gray-primary: #3b434e;
+$gray-1: #787d85;
+
+$white-primary: #ffffff;
+
 $page-color: #f5f6f8;
-$light-text: #ffffff;
-
-
-$nav-text-color: #787d85;
-$nav-line-color: #dfdfdf;
-$nav-icon-color: #787d85;
-
-$button-disabled-color: #787d85;
-$button-primary-hover-color: #5f40de;
-$button-primary-active-color: #472abb;
-$button-ghost-text-color: #3b434e;
-$button-ghost-border-color: #ebebeb;
-
 $outline-color: #ffdc3d;
 
+$button-disabled-color: #787d85;
+$button-ghost-border-color: #ebebeb;
 $input-placeholder-color: #a4a4a4;
+$nav-line-color: #dfdfdf;
 
 $shadow-primary: 0 4px 4px rgba(0, 0, 0, 0.05);
 $border-radius-primary: 5px;
 
 $font-base: "NotoSans", "Arial", sans-serif;
-$font-secondary: "Oswald", "Tahoma", sans-serif;
-
-$mobile-width: 320px;
-$tablet-width: 768px;
-$desktop-width: 1300px;
-
-$dpi: 144dpi;
-$dppx: 1.5dppx;
-
-$tablet: "min-width: #{$tablet-width}";
-$desktop: "min-width: #{$desktop-width}";
-
-$retina-dpi: "min-resolution: #{$dpi}";
-$retina-dppx: "min-resolution: #{$dppx}";
-
-$mobiles-paddings: 20px;
-$tablets-paddings: 30px;
-$desktops-paddings: 40px;

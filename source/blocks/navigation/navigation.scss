@@ -1,7 +1,7 @@
 .navigation {
   padding-left: 45px;
 
-  color: $nav-text-color;
+  color: $gray-1;
 }
 
 .navigation__first-list {
@@ -57,7 +57,7 @@
   height: 24px;
 
   & > svg {
-    fill: $nav-icon-color;
+    fill: $gray-1;
   }
 
   &--hat {

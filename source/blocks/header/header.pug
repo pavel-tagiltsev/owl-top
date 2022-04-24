@@ -1,0 +1,11 @@
+mixin header
+  header.header
+    h1.header__title Курсы по Phoroshop
+    +drop.header__drop
+    ul.header__sort-list
+      li.header__sort-item.header__sort-item--chosed
+        span.header__sort-icon
+          include ./icons/sort.svg
+        button(type='button').header__sort-button По рейтингу
+      li.header__sort-item
+        button(type='button').header__sort-button По цене

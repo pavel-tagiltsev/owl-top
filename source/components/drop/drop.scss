@@ -1,0 +1,15 @@
+.drop {
+  display: inline-block;
+  padding: 5px 10px;
+
+
+  font-weight: 600;
+
+  border-radius: 20px;
+
+  &--gray {
+    color: #ffffff;
+
+    background-color: #b3c0d9;
+  }
+}

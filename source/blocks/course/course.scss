@@ -1,5 +1,17 @@
 .course {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "description description"
+    "summary advantages-title"
+    "summary advantages-content"
+    "summary disadvantages-title"
+    "summary disadvantages-content"
+    "footer footer";
+  align-content: start;
   padding: 30px;
+
+  column-gap: 60px;
 
   background-color: $white-primary;
   border-radius: $border-radius-primary;
@@ -8,6 +20,7 @@
 
 .course__header {
   display: grid;
+  grid-area: header;
   grid-template-rows: auto auto;
   grid-template-columns: [logo] auto [title] auto 1fr [prices]  auto;
   align-items: center;
@@ -79,3 +92,60 @@
   font-weight: 300;
   font-size: 14px;
 }
+
+.course__description {
+  grid-area: description;
+  margin: 20px 0;
+}
+
+.course__summary {
+  display: grid;
+  grid-area: summary;
+  grid-template-rows: repeat(3, min-content);
+  grid-template-columns: auto auto;
+  align-items: start;
+  margin: 0;
+
+  line-height: 32px;
+}
+
+.course__summary-term {
+  justify-self: start;
+}
+
+.course__summary-def {
+  justify-self: end;
+}
+
+.course__content-hashtag {
+
+}
+
+.course__advantages-title {
+  grid-area: advantages-title;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.course__advantages-content {
+  grid-area: advantages-content;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.course__disadvantages-title {
+  grid-area: disadvantages-title;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.course__disadvantages-content {
+  grid-area: disadvantages-content;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.course__footer {
+  grid-area: footer;
+}
+

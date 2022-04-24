@@ -18,3 +18,27 @@ mixin course
         dd.course__prices-def в кредит
         dt.course__prices-term rating
         dd.course__prices-def 20 отзывов
+
+    p.course__description
+      | Студенты освоят не только hard skills, необходимые для работы веб-дизайнером,
+      | но и soft skills — навыки, которые позволят эффективно взаимодействовать в команде с менеджерами,
+      | разработчиками и маркетологами. Выпускники факультета могут успешно
+      | конкурировать с веб-дизайнерами уровня middle.
+
+    dl.course__summary
+      dt.course__summary-term Документ об окончании
+      dd.course__summary-def Диплом
+      dt.course__summary-term Сложность
+      dd.course__summary-def Начальная
+      dt.course__summary-term Длительность
+      dd.course__summary-def 5 месяцев
+    +drop('Гарантия трудоустройства', 'ghost').course__content-hashtag
+
+    h3.course__advantages-title Преимущества
+    p.course__advantages-content Хорошо структурирован курс, быстрый отклик преподователей, качество подачи материала
+    h3.course__disadvantages-title Недостатки
+    p.course__disadvantages-content Некоторое темы раскрыты не до конца
+
+    footer.course__footer
+      +button('Узнать подробнее')
+      +button('Читать отзывы', 'ghost', 'arrow')

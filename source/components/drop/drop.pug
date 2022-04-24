@@ -1,2 +1,10 @@
-mixin drop
-  span(class!=attributes.class).drop.drop--gray 10
+mixin drop(content, type)
+  case type
+    when 'discount'
+      span(class!=attributes.class aria-label!=attributes['aria-label']).drop.drop--discount= content
+    when 'ghost'
+      span(class!=attributes.class aria-label!=attributes['aria-label']).drop.drop--ghost= content
+    when 'gray'
+      span(class!=attributes.class aria-label!=attributes['aria-label']).drop.drop--gray= content
+    default
+      span(class!=attributes.class aria-label!=attributes['aria-label']).drop.drop--primary= content

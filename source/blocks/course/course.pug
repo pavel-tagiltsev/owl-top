@@ -1,0 +1,20 @@
+mixin course
+  section.course
+    header.course__header
+      img(src='@img/skillbox-logo.png' alt='Логотип компании Скиллбокс').course__logo
+
+      h2.course__title Профессия дизайнер от 0 до PRO
+      ul.course__hashtag-list
+        li.course__hashtag-item
+          +drop('Photoshop', 'ghost')
+        li.course__hashtag-item
+          +drop('Дизайн', 'ghost')
+
+      dl.course__prices
+        dt.course__prices-term 24 000 ₽
+          +drop('-10 000 ₽', 'discount')
+        dd.course__prices-def цена
+        dt.course__prices-term 5 000 ₽/мес
+        dd.course__prices-def в кредит
+        dt.course__prices-term rating
+        dd.course__prices-def 20 отзывов

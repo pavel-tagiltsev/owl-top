@@ -12,4 +12,31 @@
 
     background-color: #b3c0d9;
   }
+
+  &--discount {
+    color: #1dc37e;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 12px;
+
+    background-color: #c8f8e4;
+  }
+
+  &--ghost {
+    color: $gray-primary;
+    font-weight: 500;
+    font-size: 12px;
+
+    background-color: transparent;
+    border: 1px solid $button-ghost-border-color;
+  }
+
+  &--primary {
+    color: $primary;
+    font-weight: 500;
+    font-size: 12px;
+
+    background-color: transparent;
+    border: 1px solid $primary;
+  }
 }

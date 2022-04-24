@@ -1,12 +1,26 @@
-$black: #000000;
+$primary: #7653fc;
 $page-color: #f5f6f8;
-$green: #68b738;
-$green-2: #5eaa2f;
-$dark_green: #65a93c;
-$white: #ffffff;
-$grey: #e6e6e6;
+$light-text: #ffffff;
 
-$font-base: "Arial", sans-serif;
+
+$nav-text-color: #787d85;
+$nav-line-color: #dfdfdf;
+$nav-icon-color: #787d85;
+
+$button-disabled-color: #787d85;
+$button-primary-hover-color: #5f40de;
+$button-primary-active-color: #472abb;
+$button-ghost-text-color: #3b434e;
+$button-ghost-border-color: #ebebeb;
+
+$outline-color: #ffdc3d;
+
+$input-placeholder-color: #a4a4a4;
+
+$shadow-primary: 0 4px 4px rgba(0, 0, 0, 0.05);
+$border-radius-primary: 5px;
+
+$font-base: "NotoSans", "Arial", sans-serif;
 $font-secondary: "Oswald", "Tahoma", sans-serif;
 
 $mobile-width: 320px;

@@ -1,0 +1,82 @@
+.button {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+
+  font-size: 14px;
+  line-height: 14px;
+
+  border: none;
+  border-radius: $border-radius-primary;
+  cursor: pointer;
+
+  &:disabled {
+    background-color: $button-disabled-color;
+  }
+}
+
+.button--primary {
+  color: $light-text;
+
+  background-color: $primary;
+
+
+  & > .button__icon > svg {
+    fill: $light-text;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $button-primary-hover-color;
+  }
+
+  &:active {
+    background-color: $button-primary-active-color;
+  }
+}
+
+.button--ghost {
+  color: $button-ghost-text-color;
+
+  background-color: $light-text;
+  border: 1px solid $button-ghost-border-color;
+
+  & > .button__icon > svg {
+    fill: $button-ghost-text-color;
+  }
+
+  &:hover,
+  &:focus {
+    color: $light-text;
+
+    background-color: $primary;
+
+    & > .button__icon > svg {
+      fill: $light-text;
+    }
+  }
+
+  &:active {
+    background-color: rgba($primary, 0.7);
+  }
+}
+
+.button__content {
+  margin-right: 10px;
+}
+
+.button__icon {
+  &--arrow > svg {
+    width: 10px;
+    height: 10px;
+    margin-bottom: -1px;
+  }
+
+  &--search > svg {
+    width: 15px;
+    height: 15px;
+    margin-bottom: -3px;
+  }
+}

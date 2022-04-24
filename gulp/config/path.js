@@ -17,8 +17,8 @@ export default {
   },
   src: {
     pug: `${srcFolder}/pages/*.pug`,
-    scss: `${srcFolder}/scss/styles.scss`,
-    js: `${srcFolder}/js/scripts.js`,
+    scss: `${srcFolder}/styles.scss`,
+    js: `${srcFolder}/scripts.js`,
     images: `${srcFolder}/images/**/*.{jpg,jpeg,png,gif,webp}`,
     svg: `${srcFolder}/images/**/*.svg`,
     files: `${srcFolder}/files/**/*.*`,

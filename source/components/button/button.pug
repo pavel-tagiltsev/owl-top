@@ -1,0 +1,34 @@
+mixin icon(iconType)
+  case iconType
+    when 'arrow'
+      span.button__icon.button__icon--arrow
+        include ./icons/arrow.svg
+    when 'search'
+      span.button__icon.button__icon--search
+        include ./icons/search.svg
+
+mixin button(content='Кнопка', mod='primary', iconType)
+  case mod
+    when 'ghost'
+      button(
+        type!=attributes.type
+        class!=attributes.class
+        disabled!=attributes.disabled
+      ).button.button--ghost
+        if content
+          span.button__content= content
+          +icon(iconType)
+        else
+          +icon(iconType)
+
+    when 'primary'
+      button(
+        type!=attributes.type
+        class!=attributes.class
+        disabled!=attributes.disabled
+      ).button.button--primary
+        if content
+          span.button__content= content
+          +icon(iconType)
+        else
+          +icon(iconType)

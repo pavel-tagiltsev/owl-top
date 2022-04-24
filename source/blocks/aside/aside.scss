@@ -1,0 +1,23 @@
+.aside {
+  display: grid;
+  grid-template-rows: [logo] min-content 20px [search] min-content 30px [navigation] min-content;
+  grid-template-columns: 1fr;
+}
+
+.aside__logo {
+  display: block;
+  grid-row: logo;
+  width: 70%;
+}
+
+.aside__logo-img {
+  display: block;
+}
+
+.aside__search {
+  grid-row: search;
+}
+
+.aside__navigation {
+  grid-row: navigation;
+}

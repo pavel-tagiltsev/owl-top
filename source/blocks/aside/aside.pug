@@ -1,0 +1,8 @@
+mixin aside
+  aside(class!=attributes.class).aside
+    a(href='/' aria-label='На главную странцу').aside__logo
+      img(src='@img/logo.svg' alt='Логотип компании').aside__logo-img
+
+    +input('Поиск по сайте')(type='search' placeholder='Поиск...').aside__search
+
+    +navigation.aside__navigation

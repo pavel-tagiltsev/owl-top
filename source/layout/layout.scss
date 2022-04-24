@@ -1,0 +1,24 @@
+.layout {
+  display: grid;
+  grid-template-areas:
+    ". aside main ."
+    "footer footer footer footer";
+  grid-template-rows: 1fr auto;
+  grid-template-columns: 1fr 230px minmax(320px, 1200px) 1fr;
+  min-height: 100vh;
+
+  column-gap: 30px;
+}
+
+.layout__aside {
+  grid-area: aside;
+}
+
+.layout__main {
+  grid-area: main;
+}
+
+.layout__footer {
+  grid-area: footer;
+  min-height: 72px;
+}

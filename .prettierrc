@@ -19,8 +19,8 @@
   "xmlSelfClosingSpace": true,
 
   "pugBracketSpacing": false,
-  "pugBracketSameLine": true,
-  "pugPrintWidth": 80,
+  "pugBracketSameLine": false,
+  "pugPrintWidth": 120,
   "pugSami": false,
   "pugSingleQuote": true,
   "pugTabWidth": 2,

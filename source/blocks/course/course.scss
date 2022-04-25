@@ -1,14 +1,7 @@
 .course {
   display: grid;
-  grid-template-areas:
-    "header header"
-    "description description"
-    "summary advantages-title"
-    "summary advantages-content"
-    "summary disadvantages-title"
-    "summary disadvantages-content"
-    "footer footer";
-  align-content: start;
+  grid-template-rows: [header] auto [description] auto [columns] auto [footer] auto;
+  grid-template-columns: 1fr 1fr;
   padding: 30px;
 
   column-gap: 60px;
@@ -19,133 +12,116 @@
 }
 
 .course__header {
-  display: grid;
-  grid-area: header;
-  grid-template-rows: auto auto;
-  grid-template-columns: [logo] auto [title] auto 1fr [prices]  auto;
-  align-items: center;
-  padding-bottom: 20px;
-
-  column-gap: 30px;
-
-  border-bottom: 1px solid $button-ghost-border-color;
-}
-
-.course__logo {
-  display: block;
-  grid-row: 1 / 3;
-  grid-column: logo;
-  width: 70px 70px;
-}
-
-.course__title {
-  grid-row: 1;
-  grid-column: title;
-  margin: 0;
-
-  font-weight: 600;
-  font-size: 20px;
-}
-
-.course__hashtag-list {
-  display: flex;
-  flex-wrap: wrap;
-  grid-row: 2;
-  grid-column: title;
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
-}
-
-.course__hashtag-item {
-  margin-right: 5px;
-  margin-bottom: 5px;
-}
-
-.course__prices {
-  display: grid;
-  grid-row: 1 / 3;
-  grid-column: prices;
-  grid-template-rows: auto auto;
-  grid-template-columns: auto auto;
-  justify-content: start;
-
-  margin: 0;
-
-  column-gap: 40px;
-  row-gap: 5px;
-}
-
-.course__prices-term {
-  display: flex;
-  grid-row: 1;
-
-  font-weight: 400;
-  font-size: 20px;
-}
-
-.course__prices-def {
-  grid-row: 2;
-  margin: 0;
-
-  font-weight: 300;
-  font-size: 14px;
+  grid-row: header;
+  grid-column: 1/ 3;
+  margin-bottom: 20px;
 }
 
 .course__description {
-  grid-area: description;
-  margin: 20px 0;
+  grid-row: description;
+  grid-column: 1 / 3;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.course__left-column,
+.course__right-column {
+  grid-row: columns;
+  margin-bottom: 10px;
 }
 
 .course__summary {
   display: grid;
-  grid-area: summary;
-  grid-template-rows: repeat(3, min-content);
-  grid-template-columns: auto auto;
-  align-items: start;
+  grid-template-rows: repeat(20, min-content);
+  grid-template-columns: 1fr;
   margin: 0;
+  margin-bottom: 15px;
 
-  line-height: 32px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.course__summary-group {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .course__summary-term {
   justify-self: start;
 }
 
+.course__summary-line {
+  flex-grow: 1;
+  margin: 0 15px;
+
+  border-bottom: 2px dotted #c4c4c4;
+}
+
 .course__summary-def {
   justify-self: end;
+  margin: 0;
 }
 
-.course__content-hashtag {
-
-}
-
-.course__advantages-title {
-  grid-area: advantages-title;
+.course__features-title {
   margin: 0;
   margin-bottom: 5px;
+
+  font-weight: 700;
+
+  font-size: 16px;
 }
 
-.course__advantages-content {
-  grid-area: advantages-content;
+.course__features-content {
+  position: relative;
+
   margin: 0;
   margin-bottom: 20px;
-}
 
-.course__disadvantages-title {
-  grid-area: disadvantages-title;
-  margin: 0;
-  margin-bottom: 5px;
-}
+  font-weight: 400;
+  font-size: 16px;
 
-.course__disadvantages-content {
-  grid-area: disadvantages-content;
-  margin: 0;
-  margin-bottom: 20px;
+  &::before {
+    position: absolute;
+    top: -20px;
+    left: -15px;
+
+    width: 3px;
+    height: calc(100% + 20px);
+
+    border-radius: 20px;
+
+    content: "";
+  }
+
+  &--advantages::before {
+    background-color: #1dc37e;
+  }
+
+  &--disadvantages::before {
+    background-color: #fc836d;
+  }
 }
 
 .course__footer {
-  grid-area: footer;
+  display: flex;
+  grid-row: footer;
+  grid-column: 1 / 3;
+  padding-top: 20px;
+
+  border-top: 1px solid #ebebeb;
+}
+
+.course__footer-button {
+  margin-right: 20px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 

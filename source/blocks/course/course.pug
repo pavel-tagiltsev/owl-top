@@ -1,23 +1,6 @@
 mixin course
   section.course
-    header.course__header
-      img(src='@img/skillbox-logo.png' alt='Логотип компании Скиллбокс').course__logo
-
-      h2.course__title Профессия дизайнер от 0 до PRO
-      ul.course__hashtag-list
-        li.course__hashtag-item
-          +drop('Photoshop', 'ghost')
-        li.course__hashtag-item
-          +drop('Дизайн', 'ghost')
-
-      dl.course__prices
-        dt.course__prices-term 24 000 ₽
-          +drop('-10 000 ₽', 'discount')
-        dd.course__prices-def цена
-        dt.course__prices-term 5 000 ₽/мес
-        dd.course__prices-def в кредит
-        dt.course__prices-term rating
-        dd.course__prices-def 20 отзывов
+    +course-header.course__header
 
     p.course__description
       | Студенты освоят не только hard skills, необходимые для работы веб-дизайнером,
@@ -25,20 +8,30 @@ mixin course
       | разработчиками и маркетологами. Выпускники факультета могут успешно
       | конкурировать с веб-дизайнерами уровня middle.
 
-    dl.course__summary
-      dt.course__summary-term Документ об окончании
-      dd.course__summary-def Диплом
-      dt.course__summary-term Сложность
-      dd.course__summary-def Начальная
-      dt.course__summary-term Длительность
-      dd.course__summary-def 5 месяцев
-    +drop('Гарантия трудоустройства', 'ghost').course__content-hashtag
+    .course__left-column
+      dl.course__summary
+        .course__summary-group
+          dt.course__summary-term Документ об окончании
+          .course__summary-line
+          dd.course__summary-def Диплом
+        .course__summary-group
+          dt.course__summary-term Сложность
+          .course__summary-line
+          dd.course__summary-def Начальная
+        .course__summary-group
+          dt.course__summary-term Длительность
+          .course__summary-line
+          dd.course__summary-def 5 месяцев
+      +hashtags(['Гарантия трудоустройства'], 'ghost')
 
-    h3.course__advantages-title Преимущества
-    p.course__advantages-content Хорошо структурирован курс, быстрый отклик преподователей, качество подачи материала
-    h3.course__disadvantages-title Недостатки
-    p.course__disadvantages-content Некоторое темы раскрыты не до конца
+    .course__right-column
+      h3.course__features-title Преимущества
+      p.course__features-content.course__features-content--advantages
+        | Хорошо структурирован курс, быстрый отклик преподователей, качество подачи материал
+      h3.course__features-title Недостатки
+      p.course__features-content.course__features-content--disadvantages
+        | Некоторое темы раскрыты не до конца
 
     footer.course__footer
-      +button('Узнать подробнее')
-      +button('Читать отзывы', 'ghost', 'arrow')
+      +button('Узнать подробнее').course__footer-button
+      +button('Читать отзывы', 'ghost', 'arrow').course__footer-button

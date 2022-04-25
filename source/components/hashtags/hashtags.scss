@@ -1,0 +1,13 @@
+.hashtags {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.hashtags-item {
+  margin-right: 5px;
+  margin-bottom: 5px;
+}

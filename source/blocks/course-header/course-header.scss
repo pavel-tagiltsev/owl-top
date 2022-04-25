@@ -1,0 +1,61 @@
+.course-header {
+  display: grid;
+  grid-template-columns: [logo] auto [title] auto 1fr [prices] auto;
+  align-items: start;
+  padding-bottom: 20px;
+
+  column-gap: 30px;
+
+  border-bottom: 1px solid $button-ghost-border-color;
+}
+
+.course-header__logo {
+  display: block;
+  grid-column: logo;
+  width: 70px 70px;
+}
+
+.course-header__title-block {
+  grid-column: title;
+}
+
+.course-header__title {
+  margin: 0;
+  margin-bottom: 10px;
+
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.course-header__prices {
+  display: grid;
+  grid-column: prices;
+  grid-template-rows: auto auto;
+  grid-template-columns: auto auto;
+  justify-content: start;
+
+  margin: 0;
+
+  column-gap: 40px;
+  row-gap: 5px;
+}
+
+.course-header__prices-term {
+  display: flex;
+  grid-row: 1;
+
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.course-header__discount {
+  margin-left: 5px;
+}
+
+.course-header__prices-def {
+  grid-row: 2;
+  margin: 0;
+
+  font-weight: 300;
+  font-size: 14px;
+}

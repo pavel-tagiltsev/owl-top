@@ -1,0 +1,5 @@
+mixin hashtags(names, type)
+  ul.hashtags
+    each name in names
+      li.hashtags-item
+        +drop(name, type)

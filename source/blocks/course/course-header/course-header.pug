@@ -2,9 +2,9 @@ mixin course-header
   header(class!=attributes.class).course-header
     img(src='@img/skillbox-logo.png' alt='Логотип компании Скиллбокс').course-header__logo
 
-    .sourse-header__title-block
-      h2.course-header__title Профессия дизайнер от 0 до PRO
-      +hashtags(['Photoshop', 'Дизайн'], 'ghost')
+    h2.course-header__title Профессия дизайнер от 0 до PRO
+
+    +hashtags(['Photoshop', 'Дизайн'], 'ghost').course-header__hashtags
 
     dl.course-header__prices
       dt.course-header__prices-term 24 000 ₽

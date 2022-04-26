@@ -1,5 +1,6 @@
 .course-header {
   display: grid;
+  grid-template-rows: auto auto;
   grid-template-columns: [logo] auto [title] auto 1fr [prices] auto;
   align-items: start;
 
@@ -8,15 +9,14 @@
 
 .course-header__logo {
   display: block;
+  grid-row: 1 / 3;
   grid-column: logo;
   width: 70px 70px;
 }
 
-.course-header__title-block {
-  grid-column: title;
-}
-
 .course-header__title {
+  grid-row: 1;
+  grid-column: title;
   margin: 0;
   margin-bottom: 10px;
 
@@ -24,8 +24,14 @@
   font-size: 20px;
 }
 
+.course-header__hashtags {
+  grid-row: 2;
+  grid-column: title;
+}
+
 .course-header__prices {
   display: grid;
+  grid-row: 1 / 3;
   grid-column: prices;
   grid-template-rows: auto auto;
   grid-template-columns: auto auto;

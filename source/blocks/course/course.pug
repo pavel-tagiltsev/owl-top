@@ -1,37 +1,18 @@
+include course-header/course-header.pug
+include course-content/course-content.pug
+include course-footer/course-footer.pug
+include reviews-list/reviews-list.pug
+include reviews-form/reviews-form.pug
+
 mixin course
   section.course
     +course-header.course__header
 
-    p.course__description
-      | Студенты освоят не только hard skills, необходимые для работы веб-дизайнером,
-      | но и soft skills — навыки, которые позволят эффективно взаимодействовать в команде с менеджерами,
-      | разработчиками и маркетологами. Выпускники факультета могут успешно
-      | конкурировать с веб-дизайнерами уровня middle.
+    +course-content.course__content
 
-    .course__left-column
-      dl.course__summary
-        .course__summary-group
-          dt.course__summary-term Документ об окончании
-          .course__summary-line
-          dd.course__summary-def Диплом
-        .course__summary-group
-          dt.course__summary-term Сложность
-          .course__summary-line
-          dd.course__summary-def Начальная
-        .course__summary-group
-          dt.course__summary-term Длительность
-          .course__summary-line
-          dd.course__summary-def 5 месяцев
-      +hashtags(['Гарантия трудоустройства'], 'ghost')
+    +course-footer.course__footer
 
-    .course__right-column
-      h3.course__features-title Преимущества
-      p.course__features-content.course__features-content--advantages
-        | Хорошо структурирован курс, быстрый отклик преподователей, качество подачи материал
-      h3.course__features-title Недостатки
-      p.course__features-content.course__features-content--disadvantages
-        | Некоторое темы раскрыты не до конца
+    .course__reviews
+      +reviews-list.course__reviews-list
 
-    footer.course__footer
-      +button('Узнать подробнее').course__footer-button
-      +button('Читать отзывы', 'ghost', 'arrow').course__footer-button
+      +reviews-form.course__reviews-form

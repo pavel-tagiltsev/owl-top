@@ -2,11 +2,8 @@
   display: grid;
   grid-template-columns: [logo] auto [title] auto 1fr [prices] auto;
   align-items: start;
-  padding-bottom: 20px;
 
   column-gap: 30px;
-
-  border-bottom: 1px solid $button-ghost-border-color;
 }
 
 .course-header__logo {

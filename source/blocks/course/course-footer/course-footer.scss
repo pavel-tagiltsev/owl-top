@@ -1,0 +1,16 @@
+.course-footer {
+  display: grid;
+  grid-template-columns: 150px 150px 1fr;
+
+  column-gap: 20px;
+}
+
+.course-footer__button {
+  &--left {
+    grid-column: 1;
+  }
+
+  &--right {
+    grid-column: 2;
+  }
+}

@@ -4,7 +4,7 @@ block varaiables
   - const title = 'Index'
 
 block main
-  +header
-  ul(style='list-style: none; margin: 0; padding: 0').courses-list
-    li(style='margin-bottom: 30px').courses-item
-      +course
+  main.layout__main.index-main
+    +header.index-main__header
+    +courses.index-main__courses
+    +vacancy.index-main__vacancy

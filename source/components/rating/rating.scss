@@ -23,6 +23,10 @@
   }
 }
 
+.rating__label {
+  @include visually-hidden;
+}
+
 .rating__star {
   position: absolute;
   top: 0;

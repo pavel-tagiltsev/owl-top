@@ -1,5 +1,13 @@
 -
   const inputs = new Array(5).fill(null).map((_, i) => i + 1)
+  function declOfNum(n, text_forms) {
+    n = Math.abs(n) % 100;
+    var n1 = n % 10;
+    if (n > 10 && n < 20) { return text_forms[2]; }
+    if (n1 > 1 && n1 < 5) { return text_forms[1]; }
+    if (n1 == 1) { return text_forms[0]; }
+    return text_forms[2];
+  }
 
 mixin rating(rating, fake)
   if fake == 'fake'
@@ -21,7 +29,8 @@ mixin rating(rating, fake)
               - const id = `${Math.random()}-${index}`
               - const value = index + 1
                 input(name='rating' type='radio' id!=id value!=value required!=attributes.required).rating__input
-                label(for!=id).rating__star
+                label(for!=id).rating__star--active
+                  span.rating__label!= value + ' ' + declOfNum(value, ['звезда', 'звезды', 'звезд'])
 
     else
       fieldset(class!=attributes.class).rating
@@ -33,3 +42,4 @@ mixin rating(rating, fake)
               - const value = index + 1
                 input(name='rating' type='radio' id!=id value!=value required!=attributes.required).rating__input
                 label(for!=id).rating__star.rating__star--active
+                  span.rating__label!= value + ' ' + declOfNum(value, ['звезда', 'звезды', 'звезд'])

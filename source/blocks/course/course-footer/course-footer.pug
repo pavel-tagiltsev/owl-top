@@ -1,4 +1,4 @@
 mixin course-footer
   footer(class!=attributes.class).course-footer
-    +button('Узнать подробнее').course-footer__button.course-footer__button--left
-    +button('Читать отзывы', 'ghost', 'arrow').course-footer__button.course-footer__button--right
+    +button('Узнать подробнее')(type='button').course-footer__button.course-footer__button--left
+    +button('Читать отзывы', 'ghost', 'arrow')(type='button').course-footer__button.course-footer__button--right

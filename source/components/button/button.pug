@@ -10,11 +10,7 @@ mixin icon(iconType)
 mixin button(content='Кнопка', mod='primary', iconType)
   case mod
     when 'ghost'
-      button(
-        type!=attributes.type
-        class!=attributes.class
-        disabled!=attributes.disabled
-      ).button.button--ghost
+      button(type!=attributes.type class!=attributes.class disabled!=attributes.disabled).button.button--ghost
         if content
           span.button__content= content
           +icon(iconType)
@@ -22,11 +18,7 @@ mixin button(content='Кнопка', mod='primary', iconType)
           +icon(iconType)
 
     when 'primary'
-      button(
-        type!=attributes.type
-        class!=attributes.class
-        disabled!=attributes.disabled
-      ).button.button--primary
+      button(type!=attributes.type class!=attributes.class disabled!=attributes.disabled).button.button--primary
         if content
           span.button__content= content
           +icon(iconType)

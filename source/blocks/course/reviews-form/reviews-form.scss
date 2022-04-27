@@ -1,8 +1,8 @@
 .reviews-form {
   display: grid;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: 36px 76px auto;
   grid-template-columns: 220px  220px 1fr auto;
-  align-items: center;
+  align-items: start;
 
   row-gap: 20px;
 
@@ -22,6 +22,7 @@
 .reviews-from__rating {
   grid-row: 1;
   grid-column: 4;
+  align-self: center;
 }
 
 .reviews-form__message {

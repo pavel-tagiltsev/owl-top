@@ -11,12 +11,12 @@
 }
 
 .rating__caption {
-  // @include visually-hidden;
   margin-right: 20px;
 }
 
 .rating__input {
   @include visually-hidden;
+  bottom: 0;
 
   &:checked + .rating__star {
     background-image: url("../images/star-checked.svg");

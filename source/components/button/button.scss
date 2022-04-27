@@ -63,9 +63,11 @@
   }
 }
 
-.button__icon {
+.button__content + .button__icon {
   margin-left: 10px;
+}
 
+.button__icon {
   &--arrow > svg {
     width: 10px;
     height: 10px;

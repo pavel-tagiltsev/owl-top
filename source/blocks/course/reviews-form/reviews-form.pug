@@ -1,8 +1,9 @@
 mixin reviews-form
   form(class!=attributes.class).reviews-form
-    +input('Имя')(type='text' placeholder='Имя').reviews-form__name
-    +input('Заголовок отзыва')(type='text' placeholder='Заголовок отзыва').reviews-form__title
-    span.reviews-from__rating Оценка: rating
+    +input('Имя')(name='name' type='text' placeholder='Имя').reviews-form__name
+    +input('Заголовок отзыва')(name='title' type='text' placeholder='Заголовок отзыва').reviews-form__title
+    span.reviews-from__rating
+      +rating
     +input('Заголовок отзыва')(type='area' placeholder='Заголовок отзыва').reviews-form__message
     footer.reviews-form__footer
       +button.reviews-form__button

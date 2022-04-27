@@ -24,6 +24,7 @@
 .reviews-list__figcaption {
   display: grid;
   grid-template-columns: [author] auto [title] auto 1fr [time] auto [rating] auto;
+  align-items: center;
   margin-bottom: 15px;
 }
 

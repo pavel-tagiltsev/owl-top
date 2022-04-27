@@ -7,7 +7,8 @@ mixin reviews-list
           h4.reviews-list__title
             q(cite='Василий Раганов').reviews-list__title-quote Что вас ждет в этом курсе?
           time(datetime='2021-03-10 00:00').reviews-list__time 10 марта 2021
-          span.reviews-list__rating rating
+          span.reviews-list__rating
+            +rating(4, 'fake')
         blockquote.reviews-list__quote
           | Напишу сразу в двух курсах, так как проходил оба.
           | Java будет многим непросвещённым сложновата в изучении,

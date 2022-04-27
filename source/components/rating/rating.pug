@@ -1,0 +1,35 @@
+-
+  const inputs = new Array(5).fill(null).map((_, i) => i + 1)
+
+mixin rating(rating, fake)
+  if fake == 'fake'
+    .rating
+      .rating__group
+        each _, index in inputs
+          if rating >= index + 1
+            .rating__star.rating__star--fake
+          else
+            .rating__star
+
+  else
+    if attributes.disabled == 'disabled'
+      fieldset(disabled!=attributes.disabled).rating
+        .rating__inner
+          legend.rating__caption Оценка:
+          .rating__group
+            each _, index in inputs
+              - const id = `${Math.random()}-${index}`
+              - const value = index + 1
+                input(name='rating' type='radio' id!=id value!=value).rating__input
+                label(for!=id).rating__star
+
+    else
+      fieldset.rating
+        .rating__inner
+          legend.rating__caption Оценка:
+          .rating__group
+            each _, index in inputs
+              - const id = `${Math.random()}-${index}`
+              - const value = index + 1
+                input(name='rating' type='radio' id!=id value!=value).rating__input
+                label(for!=id).rating__star.rating__star--active

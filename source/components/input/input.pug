@@ -1,12 +1,14 @@
 mixin input(label)
+  - const {name, type, placeholder, desabled} = attributes
+
   case attributes.type
     when 'search'
       label(class!=attributes.class).input.input--search
         span.input__label.visually-hidden= label
-        input(type!=attributes.type placeholder!=attributes.placeholder disabled!=attributes.disabled).input__input
-        +button('', 'primary', 'search')(type='button' disabled!=attributes.disabled).input__button
+        input(name!=name type!=type placeholder!=placeholder disabled!=disabled).input__input
+        +button('', 'primary', 'search')(type='button' disabled!=disabled).input__button
 
     default
       label(class!=attributes.class).input
         span.input-label.visually-hidden= label
-        input(type!=attributes.type placeholder!=attributes.placeholder disabled!=attributes.disabled).input__input
+        input(name!=name type!=type placeholder!=placeholder disabled!=disabled).input__input

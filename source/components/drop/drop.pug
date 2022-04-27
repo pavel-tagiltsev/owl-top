@@ -6,5 +6,7 @@ mixin drop(content, type)
       span(class!=attributes.class aria-label!=attributes['aria-label']).drop.drop--ghost= content
     when 'gray'
       span(class!=attributes.class aria-label!=attributes['aria-label']).drop.drop--gray= content
+    when 'red'
+      span(class!=attributes.class aria-label!=attributes['aria-label']).drop.drop--red= content
     default
       span(class!=attributes.class aria-label!=attributes['aria-label']).drop.drop--primary= content

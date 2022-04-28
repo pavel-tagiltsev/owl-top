@@ -27,7 +27,10 @@ export default () => {
     .pipe(replace(/@img\//g, '../images/'))
     .pipe(
       sass({
-        includePaths: ['./node_modules/normalize.css/'],
+        includePaths: [
+          './node_modules/normalize.css/',
+          './node_modules/include-media/dist/'
+        ],
         outputStyle: 'expanded'
       })
     )

@@ -3,11 +3,11 @@
 
   height: 100%;
 
-  &--search > .input__input {
+  &--search .input__input {
     padding-right: 35px;
   }
 
-  &--textarea > .input__input {
+  &--textarea .input__input {
     resize: none;
   }
 }

@@ -1,14 +1,15 @@
 mixin reviews-list
+  h3.visually-hidden Отзывы по курсу
   ul(class!=attributes.class).reviews-list
     li.reviews-list__item
+      span.visually-hidden Первый отзыв
       figure.reviews-list__review
         figcaption.reviews-list__figcaption
           cite.reviews-list__author Василий Раганов:
           h4.reviews-list__title
-            q(cite='Василий Раганов').reviews-list__title-quote Что вас ждет в этом курсе?
+            q.reviews-list__title-quote Что вас ждет в этом курсе?
           time(datetime='2021-03-10 00:00').reviews-list__time 10 марта 2021
-          span.reviews-list__rating
-            +rating(4, 'fake')
+          +rating(4, 'fake').reviews-list__rating
         blockquote.reviews-list__quote
           | Напишу сразу в двух курсах, так как проходил оба.
           | Java будет многим непросвещённым сложновата в изучении,

@@ -1,20 +1,20 @@
 mixin reviews-form
   - const {method, action, autocomplete} = attributes
     form(class!=attributes.class method!=method action!=action autocomplete!=autocomplete).reviews-form
-      +input('Имя')(name='name' type='text' placeholder='Имя' required='true').reviews-form__name
-      +input('Заголовок отзыва')(
+      +input('Напишите ваше имя')(name='name' type='text' placeholder='Имя' required='required').reviews-form__name
+      +input('Напишите заголовок отзыва')(
         name='title'
         type='text'
         placeholder='Заголовок отзыва'
-        required='true'
+        required='required'
       ).reviews-form__title
-      +rating(required='true').reviews-from__rating
-      +input('Оставте отзыв')(
+      +rating(required='required').reviews-from__rating
+      +input('Напишите ваш отзыв')(
         name='review'
         type='textarea'
         placeholder='Текст отзыва'
         spellcheck='true'
-        required='true'
+        required='required'
       ).reviews-form__message
       footer.reviews-form__footer
         +button('Отправить')(type='submit').reviews-form__button

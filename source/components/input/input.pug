@@ -3,9 +3,10 @@ mixin input(label)
 
   case type
     when 'search'
-      label(class!=attributes.class).input.input--search
-        span.input__label= label
-        input(name!=name type!=type placeholder!=placeholder disabled!=disabled required!=required).input__input
+      div(class!=attributes.class).input.input--search
+        label
+          span.input__label= label
+          input(name!=name type!=type placeholder!=placeholder disabled!=disabled required!=required).input__input
         +button('', 'primary', 'search')(type='button' disabled!=disabled).input__button
 
     when 'textarea'

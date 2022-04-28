@@ -1,5 +1,6 @@
 mixin course-content
   div(class!=attributes.class).course-content
+    h3.visually-hidden Краткое описание
     p.course-content__description
       | Студенты освоят не только hard skills, необходимые для работы веб-дизайнером,
       | но и soft skills — навыки, которые позволят эффективно взаимодействовать в команде с менеджерами,
@@ -10,15 +11,15 @@ mixin course-content
       dl.course-content__summary
         .course-content__summary-group
           dt.course-content__summary-term Документ об окончании
-          .course-content__summary-line
+          //- .course-content__summary-line
           dd.course-content__summary-def Диплом
         .course-content__summary-group
           dt.course-content__summary-term Сложность
-          .course-content__summary-line
+          //- .course-content__summary-line
           dd.course-content__summary-def Начальная
         .course-content__summary-group
           dt.course-content__summary-term Длительность
-          .course-content__summary-line
+          //- .course-content__summary-line
           dd.course-content__summary-def 5 месяцев
       +hashtags(['Гарантия трудоустройства'], 'ghost')
 

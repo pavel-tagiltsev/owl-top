@@ -71,21 +71,21 @@ mixin thirdList(secondItem)
     each thirdItem in secondItem.thirdList
       if thirdItem.opened
         li(data-receiver='third').navigation__third-item.navigation__third-item--opened
-          a(href='#' data-toggel='third').navigation__third-title= thirdItem.thirdTitle
+          a(href='#' data-toggel='third').navigation__third-title.text--14.text--medium= thirdItem.thirdTitle
       else
         li(data-receiver='third').navigation__third-item
-          a(href='#' data-toggel='third').navigation__third-title= thirdItem.thirdTitle
+          a(href='#' data-toggel='third').navigation__third-title.text--14.text--medium= thirdItem.thirdTitle
 
 mixin secondList(firstItem)
   ul.navigation__second-list
     each secondItem in firstItem.secondList
       if secondItem.opened
         li(data-receiver='second').navigation__second-item.navigation__second-item--opened
-          span(tabindex='0' data-toggel='second').navigation__second-title= secondItem.secondTitle
+          span(tabindex='0' data-toggel='second').navigation__second-title.text--12.text--light= secondItem.secondTitle
           +thirdList(secondItem)
       else
         li(data-receiver='second').navigation__second-item
-          span(tabindex='0' data-toggel='second').navigation__second-title= secondItem.secondTitle
+          span(tabindex='0' data-toggel='second').navigation__second-title.text--12.text--light= secondItem.secondTitle
           +thirdList(secondItem)
 
 mixin navigation-icon(icon)
@@ -109,11 +109,11 @@ mixin navigation
       each firstItem in firstLists
         if firstItem.opened
           li(data-receiver='first').navigation__first-item.navigation__first-item--opened
-            span(tabindex='0' data-toggel='first').navigation__first-title= firstItem.firstTitle
+            span(tabindex='0' data-toggel='first').navigation__first-title.text--18.text--medium= firstItem.firstTitle
             +navigation-icon(firstItem.icon)
             +secondList(firstItem)
         else
           li(data-receiver='first').navigation__first-item
-            span(tabindex='0' data-toggel='first').navigation__first-title= firstItem.firstTitle
+            span(tabindex='0' data-toggel='first').navigation__first-title.text--18.text--medium= firstItem.firstTitle
             +navigation-icon(firstItem.icon)
             +secondList(firstItem)

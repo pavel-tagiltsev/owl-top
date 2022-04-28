@@ -20,7 +20,7 @@
 
   "pugBracketSpacing": false,
   "pugBracketSameLine": false,
-  "pugPrintWidth": 120,
+  "pugPrintWidth": 100,
   "pugSami": false,
   "pugSingleQuote": true,
   "pugTabWidth": 2,

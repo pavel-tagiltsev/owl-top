@@ -1,8 +1,8 @@
 mixin header
   header(class!=attributes.class).header
-    h1.header__title Курсы по Phoroshop
+    h1.header__title.text--26.text--medium Курсы по Photoshop
     +drop('10', 'gray').header__drop
-    ul.header__sort-list
+    ul.header__sort-list.text--16.text--regular
       li.header__sort-item.header__sort-item--chosed
         span.header__sort-icon
           include ./icons/sort.svg

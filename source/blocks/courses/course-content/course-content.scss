@@ -28,16 +28,13 @@
 .course-content__summary {
   margin: 0;
   margin-bottom: 15px;
-
-  font-weight: 700;
-  font-size: 16px;
 }
 
 .course-content__summary-group {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 
   &:last-child {
     margin-bottom: 0;
@@ -63,10 +60,6 @@
 .course-content__features-title {
   margin: 0;
   margin-bottom: 5px;
-
-  font-weight: 700;
-
-  font-size: 16px;
 }
 
 .course-content__features-content {
@@ -74,9 +67,6 @@
 
   margin: 0;
   margin-bottom: 20px;
-
-  font-weight: 400;
-  font-size: 16px;
 
   &::before {
     position: absolute;

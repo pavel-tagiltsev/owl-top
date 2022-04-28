@@ -12,9 +12,6 @@
 
   margin: 0;
   margin-bottom: 25px;
-
-  font-weight: 500;
-  font-size: 22px;
 }
 
 .vacancy__drop {
@@ -43,13 +40,6 @@
 
   &--total .vacancy__card-number {
     color: $primary;
-    font-weight: 700;
-    font-size: 36px;
-  }
-
-  &--salary .vacancy__card-number {
-    font-weight: 700;
-    font-size: 26px;
   }
 }
 
@@ -57,9 +47,6 @@
 .vacancy__card-title {
   margin: 0;
   margin-bottom: 10px;
-
-  font-weight: 300;
-  font-size: 20px;
 }
 
 .vacancy__card-number {

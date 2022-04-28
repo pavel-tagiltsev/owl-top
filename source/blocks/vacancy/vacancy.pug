@@ -1,19 +1,19 @@
 mixin vacancy
   section(class!=attributes.class).vacancy
-    h2.vacancy__title Вакансии - Photoshop
+    h2.vacancy__title.text--22.text--medium Вакансии - Photoshop
       +drop('hh.ru', 'red').vacancy__drop
 
     .vacancy__card.vacancy__card--left.vacancy__card--total
-      h3.vacancy__card-title Всего вакансий
-      p.vacancy__card-number 1 210
+      h3.vacancy__card-title.text--20.text--light Всего вакансий
+      p.vacancy__card-number.text--36.text--bold 1 210
 
     ul.vacancy__card.vacancy__card--right.vacancy__card--salary.vacancy__list
       li.vacancy__item.vacancy__item--junior
-        h3.vacancy__card-title Начальный
-        p.vacancy__card-number 110 000 ₽
+        h3.vacancy__card-title.text--20.text--light Начальный
+        p.vacancy__card-number.text--26.text--bold 110 000 ₽
       li.vacancy__item.vacancy__item--middle
-        h3.vacancy__card-title Средний
-        p.vacancy__card-number 190 000 ₽
+        h3.vacancy__card-title.text--20.text--light Средний
+        p.vacancy__card-number.text--26.text--bold 190 000 ₽
       li.vacancy__item.vacancy__item--senior
-        h3.vacancy__card-title Профессионал
-        p.vacancy__card-number 260 000 ₽
+        h3.vacancy__card-title.text--20.text--light Профессионал
+        p.vacancy__card-number.text--26.text--bold 260 000 ₽

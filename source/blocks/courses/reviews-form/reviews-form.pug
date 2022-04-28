@@ -1,13 +1,18 @@
 mixin reviews-form
   - const {method, action, autocomplete} = attributes
-    form(class!=attributes.class method!=method action!=action autocomplete!=autocomplete).reviews-form
-      +input('Напишите ваше имя')(name='name' type='text' placeholder='Имя' required='required').reviews-form__name
+    form(class!=attributes.class method!=method action!=action autocomplete!=autocomplete).reviews-form.text--14.text--regular
+      +input('Напишите ваше имя')(
+        name='name'
+        type='text'
+        placeholder='Имя'
+        required='required'
+      ).reviews-form__name.text--16.text--regular
       +input('Напишите заголовок отзыва')(
         name='title'
         type='text'
         placeholder='Заголовок отзыва'
         required='required'
-      ).reviews-form__title
+      ).reviews-form__title.text--16.text--regular
       +rating(required='required').reviews-from__rating
       +input('Напишите ваш отзыв')(
         name='review'
@@ -15,7 +20,7 @@ mixin reviews-form
         placeholder='Текст отзыва'
         spellcheck='true'
         required='required'
-      ).reviews-form__message
+      ).reviews-form__message.text--16.text--regular
       footer.reviews-form__footer
         +button('Отправить')(type='submit').reviews-form__button
-        p.reviews-from__annotation * Перед публикацией отзыв пройдет предварительную модерацию и проверку
+        p.reviews-from__annotation.text--lh24 * Перед публикацией отзыв пройдет предварительную модерацию и проверку

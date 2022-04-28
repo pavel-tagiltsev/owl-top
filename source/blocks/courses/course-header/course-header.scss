@@ -19,9 +19,6 @@
   grid-column: title;
   margin: 0;
   margin-bottom: 10px;
-
-  font-weight: 600;
-  font-size: 20px;
 }
 
 .course-header__hashtags {
@@ -46,9 +43,6 @@
 .course-header__prices-term {
   display: flex;
   grid-row: 1;
-
-  font-weight: 400;
-  font-size: 20px;
 }
 
 .course-header__discount {
@@ -58,7 +52,4 @@
 .course-header__prices-def {
   grid-row: 2;
   margin: 0;
-
-  font-weight: 300;
-  font-size: 14px;
 }

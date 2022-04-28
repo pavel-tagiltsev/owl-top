@@ -9,9 +9,6 @@
 .header__title {
   grid-column: title;
   margin: 0;
-
-  font-weight: 500;
-  font-size: 26px;
 }
 
 .header__drop {
@@ -31,10 +28,9 @@
 }
 
 .header__sort-item {
-  font-weight: bold;
-
   &--chosed > .header__sort-button {
     color: $primary;
+    font-weight: 700;
 
     &:hover,
     &:focus {

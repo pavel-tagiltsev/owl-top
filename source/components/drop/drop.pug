@@ -1,12 +1,27 @@
 mixin drop(content, type)
   case type
     when 'discount'
-      span(class!=attributes.class aria-label!=attributes['aria-label']).drop.drop--discount= content
+      span(
+        class!=attributes.class
+        aria-label!=attributes['aria-label']
+      ).drop.drop--discount.text--12.text--boldh= content
     when 'ghost'
-      span(class!=attributes.class aria-label!=attributes['aria-label']).drop.drop--ghost= content
+      span(
+        class!=attributes.class
+        aria-label!=attributes['aria-label']
+      ).drop.drop--ghost.text--12.text--medium= content
     when 'gray'
-      span(class!=attributes.class aria-label!=attributes['aria-label']).drop.drop--gray= content
+      span(
+        class!=attributes.class
+        aria-label!=attributes['aria-label']
+      ).drop.drop--gray.text--14.text--semibold= content
     when 'red'
-      span(class!=attributes.class aria-label!=attributes['aria-label']).drop.drop--red= content
+      span(
+        class!=attributes.class
+        aria-label!=attributes['aria-label']
+      ).drop.drop--red.text--14.text--semibold= content
     default
-      span(class!=attributes.class aria-label!=attributes['aria-label']).drop.drop--primary= content
+      span(
+        class!=attributes.class
+        aria-label!=attributes['aria-label']
+      ).drop.drop--primary.text--12.text--medium= content

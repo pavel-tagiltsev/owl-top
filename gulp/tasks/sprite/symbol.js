@@ -35,17 +35,9 @@ const symbolConfig = {
 export default function symbol() {
   const {src, dest} = app.gulp
   const {build, src: source} = app.path
-  const {plumber, notify} = app.plugins
 
   return src(source.sprite.symbol)
-    .pipe(
-      plumber(
-        notify.onError({
-          title: 'SVG',
-          message: 'Error: <%= error.message %>'
-        })
-      )
-    )
+    .pipe(app.errorHandler('SVG_SYMBOL'))
     .pipe(svgSprite(symbolConfig))
     .pipe(dest(build.images))
 }

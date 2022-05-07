@@ -1,13 +1,15 @@
 import gulp from 'gulp'
 import path from './gulp/config/path.js'
 import plugins from './gulp/config/plugins.js'
+import errorHandler from './gulp/config/errorHandler.js'
 
 global.app = {
   isBuild: process.argv.includes('--build'),
   isDev: !process.argv.includes('--build'),
   gulp,
   path,
-  plugins
+  plugins,
+  errorHandler
 }
 
 //Main

@@ -12,17 +12,10 @@ const sass = gulpSass(dartSass)
 export default function scss() {
   const {isDev, isBuild} = app
   const {src, dest} = app.gulp
-  const {plumber, notify, rename, replace, gulpIf, browserSync} = app.plugins
+  const {rename, replace, gulpIf, browserSync} = app.plugins
 
   return src(app.path.src.scss)
-    .pipe(
-      plumber(
-        notify.onError({
-          title: 'SCSS',
-          message: 'Error: <%= error.message %>'
-        })
-      )
-    )
+    .pipe(app.errorHandler('SCSS'))
     .pipe(gulpIf(isDev, sourcemaps.init()))
     .pipe(replace(/@img\//g, '../images'))
     .pipe(

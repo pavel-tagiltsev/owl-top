@@ -3,17 +3,10 @@ import webpack from 'webpack-stream'
 export default function js() {
   const {isBuild} = app
   const {src, dest} = app.gulp
-  const {plumber, notify, browserSync} = app.plugins
+  const {browserSync} = app.plugins
 
   return src(app.path.src.js)
-    .pipe(
-      plumber(
-        notify.onError({
-          title: 'JS',
-          message: 'Error: <%= error.message %>'
-        })
-      )
-    )
+    .pipe(app.errorHandler('JS'))
     .pipe(
       webpack({
         mode: isBuild ? 'production' : 'development',

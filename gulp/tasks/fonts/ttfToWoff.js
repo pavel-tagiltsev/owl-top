@@ -5,17 +5,9 @@ export default function ttfToWoff() {
   const {src, dest} = app.gulp
   const {fonts: build} = app.path.build
   const {fonts: source} = app.path.src
-  const {plumber, notify} = app.plugins
 
   return src(`${source}*.ttf`)
-    .pipe(
-      plumber(
-        notify.onError({
-          title: 'TTF_TO_WOFF',
-          message: 'Error: <%= error.message %>'
-        })
-      )
-    )
+    .pipe(app.errorHandler('TTF_TO_WOFF'))
     .pipe(
       fonter({
         formats: ['woff']

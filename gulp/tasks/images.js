@@ -4,17 +4,10 @@ export default function images() {
   const {isBuild} = app
   const {src, dest} = app.gulp
   const {build, src: source} = app.path
-  const {plumber, notify, newer, gulpIf, browserSync, webp} = app.plugins
+  const {newer, gulpIf, browserSync, webp} = app.plugins
 
   return src(source.images)
-    .pipe(
-      plumber(
-        notify.onError({
-          title: 'IMAGES',
-          message: 'Error: <%= error.message %>'
-        })
-      )
-    )
+    .pipe(app.errorHandler('IMAGES'))
     .pipe(newer(build.images))
     .pipe(gulpIf(isBuild, webp()))
     .pipe(gulpIf(isBuild, dest(build.images)))

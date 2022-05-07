@@ -12,8 +12,7 @@ export default {
     js: `${distFolder}/js/`,
     images: `${distFolder}/images/`,
     files: `${distFolder}/files/`,
-    fonts: `${distFolder}/fonts/`,
-    svgSprite: `${srcFolder}/svg-sprite/`
+    fonts: `${distFolder}/fonts/`
   },
   src: {
     pug: `${srcFolder}/pages/*.pug`,
@@ -24,7 +23,10 @@ export default {
     files: `${srcFolder}/files/**/*.*`,
     fonts: `${srcFolder}/fonts/`,
     fontStyle: `${srcFolder}/scss/fonts.scss`,
-    svgSprite: `${srcFolder}/svg/*.svg`
+    sprite: {
+      stack: `${srcFolder}/svg/stack/**/*.svg`,
+      symbol: `${srcFolder}/svg/symbol/**/*.svg`
+    }
   },
   watch: {
     pug: `${srcFolder}/**/*.pug`,
@@ -33,7 +35,6 @@ export default {
     images: `${srcFolder}/**/*.{jpg,jpeg,png,svg,gif,webp,ico}`,
     files: `${srcFolder}/files/**/*.*`
   },
-  svgSpriteFolder: `${srcFolder}/svg-sprite`,
   distFolder,
   srcFolder,
   rootFolder,

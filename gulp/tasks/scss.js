@@ -24,7 +24,7 @@ export default () => {
       )
     )
     .pipe(gulpIf(isDev, sourcemaps.init()))
-    .pipe(replace(/@img\//g, '../images/'))
+    .pipe(replace(/@img\//g, '../images'))
     .pipe(
       sass({
         includePaths: [

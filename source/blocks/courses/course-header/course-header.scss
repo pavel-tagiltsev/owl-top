@@ -1,35 +1,63 @@
 .course-header {
   display: grid;
   grid-template-rows: auto auto;
-  grid-template-columns: [logo] auto [title] auto 1fr [prices] auto;
+  grid-template-columns: auto auto 1fr auto;
   align-items: start;
 
   column-gap: 30px;
+
+  @include media("<desktop") {
+    grid-template-rows: auto auto 20px auto;
+    grid-template-columns: 70px auto;
+  }
+
+  @include media("<575px") {
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: 1fr;
+  }
 }
 
 .course-header__logo {
   display: block;
   grid-row: 1 / 3;
-  grid-column: logo;
-  width: 70px 70px;
+  grid-column: 1;
+  width: 70px;
+  height: 70px;
+
+  @include media("<575px") {
+    grid-row: 1;
+    grid-column: 1;
+    margin-bottom: 15px;
+  }
 }
 
 .course-header__title {
   grid-row: 1;
-  grid-column: title;
+  grid-column: 2;
   margin: 0;
   margin-bottom: 10px;
+
+  @include media("<575px") {
+    grid-row: 2;
+    grid-column: 1;
+  }
 }
 
 .course-header__hashtags {
   grid-row: 2;
-  grid-column: title;
+  grid-column: 2;
+
+  @include media("<575px") {
+    grid-row: 3;
+    grid-column: 1;
+    margin-bottom: 30px;
+  }
 }
 
 .course-header__prices {
   display: grid;
   grid-row: 1 / 3;
-  grid-column: prices;
+  grid-column: 4;
   grid-template-rows: auto auto;
   grid-template-columns: auto auto;
   justify-content: start;
@@ -38,11 +66,39 @@
 
   column-gap: 40px;
   row-gap: 5px;
+
+  @include media("<desktop") {
+    grid-row: 4;
+    grid-column: 1 / 3;
+  }
+
+  @include media("<575px") {
+    grid-row: 4;
+    grid-column: 1;
+    grid-template-columns: 1fr;
+  }
 }
 
 .course-header__prices-term {
   display: flex;
   grid-row: 1;
+
+  @include media("<575px") {
+    &--price {
+      grid-row: 1;
+      grid-column: 1;
+    }
+
+    &--credit {
+      grid-row: 3;
+      grid-column: 1;
+    }
+
+    &--rating {
+      grid-row: 5;
+      grid-column: 1;
+    }
+  }
 }
 
 .course-header__discount {
@@ -52,4 +108,23 @@
 .course-header__prices-def {
   grid-row: 2;
   margin: 0;
+
+  @include media("<575px") {
+    margin-bottom: 15px;
+
+    &--price {
+      grid-row: 2;
+      grid-column: 1;
+    }
+
+    &--credit {
+      grid-row: 4;
+      grid-column: 1;
+    }
+
+    &--rating {
+      grid-row: 6;
+      grid-column: 1;
+    }
+  }
 }

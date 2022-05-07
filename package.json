@@ -9,7 +9,7 @@
     "build": "gulp build --build",
     "zip": "gulp deployZIP --build",
     "deploy": "gulp deployFTP --build",
-    "svgSprite": "gulp svgSprite",
+    "sprite": "gulp sprite",
     "eclint": "eclint check \"**/*.*\"",
     "stylelint": "stylelint \"source/**/*.scss\"",
     "prettier": "prettier --check \"**/*.*\"",

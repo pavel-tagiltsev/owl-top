@@ -4,6 +4,11 @@
   grid-template-columns: 260px 1fr;
 
   column-gap: 30px;
+
+  @include media("<1220px") {
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 1fr;
+  }
 }
 
 .vacancy__title {
@@ -12,6 +17,10 @@
 
   margin: 0;
   margin-bottom: 25px;
+
+  @include media("<1220px") {
+    grid-column: 1;
+  }
 }
 
 .vacancy__drop {
@@ -41,6 +50,19 @@
   &--total .vacancy__card-number {
     color: $primary;
   }
+
+  @include media("<1220px") {
+    &--left {
+      grid-row: 2;
+      grid-column: 1;
+      margin-bottom: 20px;
+    }
+
+    &--right {
+      grid-row: 3;
+      grid-column: 1;
+    }
+  }
 }
 
 
@@ -59,6 +81,11 @@
   margin: 0;
 
   list-style: none;
+
+  @include media("<575px") {
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 1fr;
+  }
 }
 
 .vacancy__item {
@@ -70,6 +97,7 @@
 
   &:last-child {
     border-right: none;
+    border-bottom: none;
   }
 
   &::after {
@@ -84,14 +112,28 @@
   }
 
   &--junior::after {
-    background-image: url("../images/junior.svg");
+    background-image: url("../images/stack-sprite.svg#junior");
   }
 
   &--middle::after {
-    background-image: url("../images/middle.svg");
+    background-image: url("../images/stack-sprite.svg#middle");
   }
 
   &--senior::after {
-    background-image: url("../images/senior.svg");
+    background-image: url("../images/stack-sprite.svg#senior");
+  }
+
+  @include media("<575px") {
+    margin-right: 40px;
+    margin-left: 40px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+
+    border-right: none;
+    border-bottom: 1px solid #ebebeb;
+
+    &::after {
+      bottom: 10px;
+    }
   }
 }

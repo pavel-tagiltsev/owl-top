@@ -31,6 +31,10 @@
   background-color: $white-primary;
   border-radius: $border-radius-primary;
   box-shadow: $shadow-primary;
+
+  @include media("<575px") {
+    padding: 20px;
+  }
 }
 
 .courses__course-header {

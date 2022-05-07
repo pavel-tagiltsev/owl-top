@@ -22,6 +22,17 @@
   grid-template-columns: [author] auto [title] auto 1fr [time] auto [rating] auto;
   align-items: center;
   margin-bottom: 15px;
+
+  @include media("<650px") {
+    grid-template-rows: auto auto;
+    grid-template-columns: auto 1fr;
+    row-gap: 20px;
+  }
+
+  @include media("<450px") {
+    grid-template-rows: auto auto;
+    grid-template-columns: auto 1fr;
+  }
 }
 
 .reviews-list__author {
@@ -47,6 +58,11 @@
 
     content: "";
   }
+
+  @include media("<650px") {
+    grid-row: 1;
+    grid-column: 1;
+  }
 }
 
 .reviews-list__title {
@@ -54,6 +70,16 @@
   margin: 0;
 
   font-weight: inherit;
+
+  @include media("<650px") {
+    grid-row: 1;
+    grid-column: 2;
+  }
+
+  @include media("<450px") {
+    grid-row: 2;
+    grid-column: 1;
+  }
 }
 
 .reviews-list__title-quote {
@@ -65,10 +91,31 @@
 .reviews-list__time {
   grid-column: time;
   margin-right: 20px;
+
+  @include media("<650px") {
+    grid-row: 2;
+    grid-column: 1;
+  }
+
+  @include media("<450px") {
+    grid-row: 3;
+  }
 }
 
 .reviews-list__rating {
   grid-column: rating;
+
+  @include media("<650px") {
+    grid-row: 2;
+    grid-column: 2;
+    justify-self: end;
+  }
+
+  @include media("<450px") {
+    grid-row: 4;
+    grid-column: 1;
+    justify-self: start;
+  }
 }
 
 .reviews-list__quote {

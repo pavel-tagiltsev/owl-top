@@ -1,17 +1,22 @@
 mixin course-header
   header(class!=attributes.class).course-header
-    img(src='@img/skillbox-logo.png' alt='Логотип компании Скиллбокс').course-header__logo
+    img(
+      src='@img/skillbox-logo.png'
+      alt='Логотип компании Скиллбокс'
+      width='70'
+      height='70'
+    ).course-header__logo
 
     h2.course-header__title.text--20.text--semibold Профессия дизайнер от 0 до PRO
 
     +hashtags(['Photoshop', 'Дизайн'], 'ghost').course-header__hashtags
 
     dl.course-header__prices
-      dt.course-header__prices-term.text--20.text--regular 24 000 ₽
+      dt.course-header__prices-term.course-header__prices-term--price.text--20.text--regular 24 000 ₽
         +drop('-10 000 ₽', 'discount').course-header__discount
-      dd.course-header__prices-def.text-14.text--light цена
-      dt.course-header__prices-term.text--20.text--regular 5 000 ₽/мес
-      dd.course-header__prices-def.text-14.text--light в кредит
-      dt.course-header__prices-term.text
+      dd.course-header__prices-def.course-header__prices-def--price.text--14.text--light цена
+      dt.course-header__prices-term.course-header__prices-term--credit.text--20.text--regular 5 000 ₽/мес
+      dd.course-header__prices-def.course-header__prices-def--credit.text--14.text--light в кредит
+      dt.course-header__prices-term.course-header__prices-term--rating.text
         +rating(4, 'fake')
-      dd.course-header__prices-def.text-14.text--light 20 отзывов
+      dd.course-header__prices-def.course-header__prices-def--rating.text--14.text--light 20 отзывов

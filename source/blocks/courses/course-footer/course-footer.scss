@@ -3,6 +3,10 @@
   grid-template-columns: 150px 150px 1fr;
 
   column-gap: 20px;
+
+  @include media("<450px") {
+    grid-template-columns: 150px;
+  }
 }
 
 .course-footer__button {
@@ -12,5 +16,23 @@
 
   &--right {
     grid-column: 2;
+  }
+
+  @include media("<450px") {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &--left {
+      grid-row: 1;
+      grid-column: 1;
+    }
+
+    &--right {
+      grid-row: 2;
+      grid-column: 1;
+    }
   }
 }

@@ -6,15 +6,32 @@ mixin input(label)
       div(class!=attributes.class).input.input--search
         label
           span.input__label= label
-          input(name!=name type!=type placeholder!=placeholder disabled!=disabled required!=required).input__input
+          input(
+            name!=name
+            type!=type
+            placeholder!=placeholder
+            disabled!=disabled
+            required!=required
+          ).input__input
         +button('', 'primary', 'search')(type='button' disabled!=disabled).input__button
 
     when 'textarea'
       label(class!=attributes.class).input.input--textarea
         span.input__label!= label
-        textarea(name!=name placeholder!=placeholder spellcheck!=spellcheck required!=required).input__input
+        textarea(
+          name!=name
+          placeholder!=placeholder
+          spellcheck!=spellcheck
+          required!=required
+        ).input__input
 
     default
       label(class!=attributes.class).input
         span.input__label= label
-        input(name!=name type!=type placeholder!=placeholder disabled!=disabled required!=required).input__input
+        input(
+          name!=name
+          type!=type
+          placeholder!=placeholder
+          disabled!=disabled
+          required!=required
+        ).input__input

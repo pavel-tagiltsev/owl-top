@@ -4,10 +4,21 @@
     ". aside main ."
     "footer footer footer footer";
   grid-template-rows: 1fr auto;
-  grid-template-columns: 1fr 230px minmax(320px, 1200px) 1fr;
+  grid-template-columns: 1fr 230px minmax(280px, 1200px) 1fr;
   min-height: 100vh;
 
   column-gap: 30px;
+
+  @include media("<tablet") {
+    grid-template-areas:
+      ". main ."
+      "footer footer footer";
+    grid-template-columns: 1fr minmax(280px, 1200px) 1fr;
+  }
+
+  @include media("<575px") {
+    column-gap: 20px;
+  }
 }
 
 .layout__aside {

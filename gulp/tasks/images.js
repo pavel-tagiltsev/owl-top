@@ -1,7 +1,7 @@
 import webp from 'gulp-webp'
 import imagemin from 'gulp-imagemin'
 
-export default () => {
+export default function images() {
   const {isBuild} = app
   const {src, dest} = app.gulp
   const {build, src: source} = app.path

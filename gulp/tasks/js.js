@@ -1,6 +1,6 @@
 import webpack from 'webpack-stream'
 
-export default () => {
+export default function js() {
   const {isBuild} = app
   const {src, dest} = app.gulp
   const {plumber, notify, browserSync} = app.plugins

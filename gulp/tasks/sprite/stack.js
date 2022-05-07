@@ -32,7 +32,7 @@ const stackConfig = {
   }
 }
 
-export default () => {
+export default function stack() {
   const {src, dest} = app.gulp
   const {build, src: source} = app.path
   const {plumber, notify} = app.plugins

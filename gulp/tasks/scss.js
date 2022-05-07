@@ -9,7 +9,7 @@ import groupCssMediaQueries from 'gulp-group-css-media-queries'
 
 const sass = gulpSass(dartSass)
 
-export default () => {
+export default function scss() {
   const {isDev, isBuild} = app
   const {src, dest} = app.gulp
   const {plumber, notify, rename, replace, gulpIf, browserSync} = app.plugins

@@ -1,4 +1,4 @@
-export default () => {
+export default function server() {
   app.plugins.browserSync.init({
     server: {
       baseDir: app.path.build.html

@@ -1,5 +1,5 @@
 import del from 'del'
 
-export default () => {
+export default function reset() {
   return del(app.path.distFolder)
 }

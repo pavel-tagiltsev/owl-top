@@ -1,7 +1,7 @@
 import del from 'del'
 import zipPlugin from 'gulp-zip'
 
-export default () => {
+export default function zip() {
   const {src, dest} = app.gulp
   const {distFolder, rootFolder} = app.path
   const {plumber, notify} = app.plugins

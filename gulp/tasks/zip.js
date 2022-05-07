@@ -1,10 +1,9 @@
 import del from 'del'
-import zipPlugin from 'gulp-zip'
 
 export default function zip() {
   const {src, dest} = app.gulp
   const {distFolder, rootFolder} = app.path
-  const {plumber, notify} = app.plugins
+  const {plumber, notify, zip} = app.plugins
 
   del(`./${rootFolder}.zip`)
 
@@ -17,6 +16,6 @@ export default function zip() {
         })
       )
     )
-    .pipe(zipPlugin(`${rootFolder}.zip`))
+    .pipe(zip(`${rootFolder}.zip`))
     .pipe(dest('./'))
 }

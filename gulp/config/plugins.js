@@ -1,17 +1,15 @@
-import replace from 'gulp-replace'
-import plumber from 'gulp-plumber'
-import notify from 'gulp-notify'
-import browserSync from 'browser-sync'
-import newer from 'gulp-newer'
-import gulpIf from 'gulp-if'
-import rename from 'gulp-rename'
+import path from 'path'
+import __dirname from '../../root.js'
+import gulpLoadPlugins from 'gulp-load-plugins'
 
-export default {
-  replace,
-  plumber,
-  notify,
-  browserSync,
-  newer,
-  gulpIf,
-  rename
-}
+/*
+module.parent deprecated in Node 14+
+https://github.com/jackfranklin/gulp-load-plugins/issues/141
+*/
+export default gulpLoadPlugins({
+  config: path.resolve(__dirname, 'package.json'),
+  pattern: ['gulp-*', 'gulp.*', '@*/gulp{-,.}*', 'browser-*'],
+  rename: {
+    'gulp-if': 'gulpIf'
+  }
+})

@@ -1,9 +1,7 @@
-import gulpPug from 'gulp-pug'
-import webpHtmlNosvg from 'gulp-webp-html-nosvg'
-
 export default function pug() {
   const {src, dest} = app.gulp
-  const {plumber, notify, browserSync, gulpIf, replace} = app.plugins
+  const {plumber, notify, browserSync, gulpIf, replace, pug, webpHtmlNosvg} =
+    app.plugins
 
   return src(app.path.src.pug)
     .pipe(
@@ -14,7 +12,7 @@ export default function pug() {
         })
       )
     )
-    .pipe(gulpPug({pretty: app.isDev}))
+    .pipe(pug({pretty: app.isDev}))
     .pipe(replace(/@img\//g, 'images/'))
     .pipe(gulpIf(app.isBuild, webpHtmlNosvg()))
     .pipe(dest(app.path.build.html))

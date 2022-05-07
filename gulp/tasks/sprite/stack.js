@@ -1,4 +1,4 @@
-import svgSprite from 'gulp-svg-sprite'
+// import svgSprite from 'gulp-svg-sprite'
 
 const svgoPlugins = [
   {removeViewBox: false},
@@ -46,6 +46,6 @@ export default function stack() {
         })
       )
     )
-    .pipe(svgSprite(stackConfig))
+    .pipe(app.plugins.svgSprite(stackConfig))
     .pipe(dest(build.images))
 }

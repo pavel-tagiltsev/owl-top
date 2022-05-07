@@ -43,7 +43,7 @@ function watcher() {
 const fonts = gulp.series(otfToTtf, ttfToWoff, transferWoff, fontStyle)
 const sprite = gulp.parallel(spriteStack, spriteSymbol)
 const mainTasks = gulp.series(
-  fonts,
+  // fonts,
   sprite,
   gulp.parallel(pug, scss, js, images, files)
 )

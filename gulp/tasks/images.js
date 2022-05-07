@@ -1,11 +1,10 @@
-import webp from 'gulp-webp'
 import imagemin from 'gulp-imagemin'
 
 export default function images() {
   const {isBuild} = app
   const {src, dest} = app.gulp
   const {build, src: source} = app.path
-  const {plumber, notify, newer, gulpIf, browserSync} = app.plugins
+  const {plumber, notify, newer, gulpIf, browserSync, webp} = app.plugins
 
   return src(source.images)
     .pipe(

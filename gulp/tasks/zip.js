@@ -2,13 +2,13 @@ import del from 'del'
 
 export default function zip() {
   const {src, dest} = app.gulp
-  const {distFolder, rootFolder} = app.path
+  const {buildFolder, rootFolderName} = app.path
   const {zip} = app.plugins
 
-  del(`./${rootFolder}.zip`)
+  del(`./${rootFolderName}.zip`)
 
-  return src(`${distFolder}/**/*.*`)
+  return src(`${buildFolder}/**/*.*`)
     .pipe(app.errorHandler('ZIP'))
-    .pipe(zip(`${rootFolder}.zip`))
+    .pipe(zip(`${rootFolderName}.zip`))
     .pipe(dest('./'))
 }

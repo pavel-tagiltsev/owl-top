@@ -1,15 +1,4 @@
-import svgSprite from 'gulp-svg-sprite'
-
-const svgoPlugins = [
-  {removeViewBox: false},
-  {removeUnusedNS: false},
-  {removeUselessStrokeAndFill: true},
-  {cleanupIDs: false},
-  {removeComments: true},
-  {removeEmptyAttrs: true},
-  {removeEmptyText: true},
-  {collapseGroups: true}
-]
+import svgoPlugins from './svgoPlugins.js'
 
 const symbolConfig = {
   shape: {
@@ -34,10 +23,10 @@ const symbolConfig = {
 
 export default function symbol() {
   const {src, dest} = app.gulp
-  const {build, src: source} = app.path
+  const {build, source} = app.path
 
   return src(source.sprite.symbol)
     .pipe(app.errorHandler('SVG_SYMBOL'))
-    .pipe(svgSprite(symbolConfig))
+    .pipe(app.plugins.svgSprite(symbolConfig))
     .pipe(dest(build.images))
 }

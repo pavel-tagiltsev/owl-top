@@ -1,7 +1,6 @@
 export default function transferWoff() {
   const {src, dest} = app.gulp
-  const {fonts: build} = app.path.build
-  const {fonts: source} = app.path.src
+  const {build, source} = app.path
 
-  return src(`${source}*.{woff,woff2}`).pipe(dest(build))
+  return src(`${source.fonts}*.{woff,woff2}`).pipe(dest(build.fonts))
 }

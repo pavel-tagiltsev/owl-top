@@ -12,9 +12,10 @@ const sass = gulpSass(dartSass)
 export default function scss() {
   const {isDev, isBuild} = app
   const {src, dest} = app.gulp
+  const {build, source} = app.path
   const {rename, replace, gulpIf, browserSync} = app.plugins
 
-  return src(app.path.src.scss)
+  return src(source.scss)
     .pipe(app.errorHandler('SCSS'))
     .pipe(gulpIf(isDev, sourcemaps.init()))
     .pipe(replace(/@img\//g, '../images'))
@@ -29,10 +30,10 @@ export default function scss() {
     )
     .pipe(gulpIf(isBuild, groupCssMediaQueries()))
     .pipe(gulpIf(isBuild, postcss([autoprefixer()])))
-    .pipe(gulpIf(isBuild, dest(app.path.build.css)))
+    .pipe(gulpIf(isBuild, dest(build.css)))
     .pipe(postcss([csso()]))
     .pipe(rename('styles.min.css'))
     .pipe(gulpIf(isDev, sourcemaps.write('.')))
-    .pipe(dest(app.path.build.css))
+    .pipe(dest(build.css))
     .pipe(browserSync.stream())
 }

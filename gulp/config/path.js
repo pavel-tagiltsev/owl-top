@@ -1,42 +1,42 @@
 import path from 'path'
 
-const rootFolder = path.basename(path.resolve())
-const distFolder = `./build`
-const srcFolder = `./source`
+const rootFolderName = path.basename(path.resolve())
+const buildFolder = `./build`
+const sourceFolder = `./source`
 const ftpFolder = 'test'
 
 export default {
   build: {
-    html: `${distFolder}/`,
-    css: `${distFolder}/css/`,
-    js: `${distFolder}/js/`,
-    images: `${distFolder}/images/`,
-    files: `${distFolder}/files/`,
-    fonts: `${distFolder}/fonts/`
+    html: `${buildFolder}/`,
+    css: `${buildFolder}/css/`,
+    js: `${buildFolder}/js/`,
+    images: `${buildFolder}/images/`,
+    files: `${buildFolder}/files/`,
+    fonts: `${buildFolder}/fonts/`
   },
-  src: {
-    pug: `${srcFolder}/pages/*.pug`,
-    scss: `${srcFolder}/styles.scss`,
-    js: `${srcFolder}/scripts.js`,
-    images: `${srcFolder}/images/**/*.{jpg,jpeg,png,gif,webp}`,
-    svg: `${srcFolder}/images/**/*.svg`,
-    files: `${srcFolder}/files/**/*.*`,
-    fonts: `${srcFolder}/fonts/`,
-    fontStyle: `${srcFolder}/scss/fonts.scss`,
+  source: {
+    pug: `${sourceFolder}/pages/*.pug`,
+    scss: `${sourceFolder}/styles.scss`,
+    js: `${sourceFolder}/scripts.js`,
+    images: `${sourceFolder}/images/**/*.{jpg,jpeg,png,gif,webp}`,
+    svg: `${sourceFolder}/images/**/*.svg`,
+    files: `${sourceFolder}/files/**/*.*`,
+    fonts: `${sourceFolder}/fonts/`,
+    fontStyle: `${sourceFolder}/scss/fonts.scss`,
     sprite: {
-      stack: `${srcFolder}/svg/stack/**/*.svg`,
-      symbol: `${srcFolder}/svg/symbol/**/*.svg`
+      stack: `${sourceFolder}/svg/stack/**/*.svg`,
+      symbol: `${sourceFolder}/svg/symbol/**/*.svg`
     }
   },
   watch: {
-    pug: `${srcFolder}/**/*.pug`,
-    scss: `${srcFolder}/**/*.scss`,
-    js: `${srcFolder}/**/*.js`,
-    images: `${srcFolder}/**/*.{jpg,jpeg,png,svg,gif,webp,ico}`,
-    files: `${srcFolder}/files/**/*.*`
+    pug: `${sourceFolder}/**/*.pug`,
+    scss: `${sourceFolder}/**/*.scss`,
+    js: `${sourceFolder}/**/*.js`,
+    images: `${sourceFolder}/**/*.{jpg,jpeg,png,svg,gif,webp,ico}`,
+    files: `${sourceFolder}/files/**/*.*`
   },
-  distFolder,
-  srcFolder,
-  rootFolder,
+  buildFolder,
+  sourceFolder,
+  rootFolderName,
   ftpFolder
 }

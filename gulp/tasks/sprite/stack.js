@@ -1,15 +1,4 @@
-// import svgSprite from 'gulp-svg-sprite'
-
-const svgoPlugins = [
-  {removeViewBox: false},
-  {removeUnusedNS: false},
-  {removeUselessStrokeAndFill: true},
-  {cleanupIDs: false},
-  {removeComments: true},
-  {removeEmptyAttrs: true},
-  {removeEmptyText: true},
-  {collapseGroups: true}
-]
+import svgoPlugins from './svgoPlugins.js'
 
 const stackConfig = {
   shape: {
@@ -34,7 +23,7 @@ const stackConfig = {
 
 export default function stack() {
   const {src, dest} = app.gulp
-  const {build, src: source} = app.path
+  const {build, source} = app.path
 
   return src(source.sprite.stack)
     .pipe(app.errorHandler('SVG_STACK'))

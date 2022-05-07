@@ -1,13 +1,12 @@
 import fs from 'fs'
 
 export default function fontStyle(done) {
-  const {fonts: build} = app.path.build
-  const {fontStyle} = app.path.src
+  const {build, source} = app.path
 
   // Файл стилей подключения шрифтов
-  let fontsFile = fontStyle
+  let fontsFile = source.fontStyle
   // Проверяем существуют ли файлы шрифтов
-  fs.readdir(build, function (err, fontsFiles) {
+  fs.readdir(build.fonts, function (err, fontsFiles) {
     if (fontsFiles) {
       // Проверяем существует ли файл стилей для подключения шрифтов
       if (!fs.existsSync(fontsFile)) {
@@ -60,7 +59,7 @@ export default function fontStyle(done) {
       } else {
         // Если файл есть нужно его удалить
         console.log(
-          `${fontStyle} уже существует. Для обновления файла нужно его удалить!`
+          `${source.fontStyle} уже существует. Для обновления файла нужно его удалить!`
         )
       }
     }

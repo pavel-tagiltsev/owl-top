@@ -4,6 +4,9 @@
   justify-content: center;
   padding: 10px;
 
+  font-weight: 400;
+  font-size: 14px;
+
   border: none;
   border-radius: $border-radius-primary;
   cursor: pointer;
@@ -17,11 +20,6 @@
   color: $white-primary;
 
   background-color: $primary;
-
-
-  & > .button__icon > svg {
-    fill: $white-primary;
-  }
 
   &:hover,
   &:focus {
@@ -39,8 +37,8 @@
   background-color: $white-primary;
   border: 1px solid $button-ghost-border-color;
 
-  & > .button__icon > svg {
-    fill: $gray-primary;
+  & > .button__icon::after {
+    filter: $filter-white;
   }
 
   &:hover,
@@ -49,8 +47,8 @@
 
     background-color: $primary;
 
-    & > .button__icon > svg {
-      fill: $white-primary;
+    & > .button__icon::after {
+      filter: none;
     }
   }
 
@@ -59,20 +57,37 @@
   }
 }
 
-.button__content + .button__icon {
-  margin-left: 10px;
-}
-
 .button__icon {
-  &--arrow > svg {
-    width: 10px;
-    height: 10px;
-    margin-bottom: -1px;
+  position: relative;
+
+  padding-right: 20px;
+
+  &::after {
+    position: absolute;
+
+    background-repeat: no-repeat;
+
+    content: "";
   }
 
-  &--search > svg {
+
+  &--arrow::after {
+    top: 4px;
+    right: 0;
+
+    width: 10px;
+    height: 10px;
+
+    background-image: url("../images/stack-sprite.svg#arrow");
+  }
+
+  &--search::after {
+    top: -7.5px;
+    right: 2.5px;
+
     width: 15px;
     height: 15px;
-    margin-bottom: -3px;
+
+    background-image: url("../images/stack-sprite.svg#search");
   }
 }

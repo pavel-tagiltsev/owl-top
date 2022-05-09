@@ -73,7 +73,7 @@ mixin thirdList(secondItem)
         class!=thirdItem.opened ? 'navigation__third-item--opened' : ''
         data-receiver='third'
       ).navigation__third-item
-        a(href='#' data-toggel='third').navigation__third-title.text--14.text--medium= thirdItem.thirdTitle
+        a(href='#' data-toggel='third').navigation__third-title= thirdItem.thirdTitle
 
 mixin secondList(firstItem)
   ul.navigation__second-list
@@ -82,7 +82,7 @@ mixin secondList(firstItem)
         class!=secondItem.opened ? 'navigation__second-item--opened' : ''
         data-receiver='second'
       ).navigation__second-item
-        span(tabindex='0' data-toggel='second').navigation__second-title.text--12.text--light= secondItem.secondTitle
+        span(tabindex='0' data-toggel='second').navigation__second-title= secondItem.secondTitle
         +thirdList(secondItem)
 
 mixin navigation
@@ -97,5 +97,5 @@ mixin navigation
             class!='navigation__first-title--' + firstItem.icon
             tabindex='0'
             data-toggel='first'
-          ).navigation__first-title.text--18.text--medium= firstItem.firstTitle
+          ).navigation__first-title= firstItem.firstTitle
           +secondList(firstItem)

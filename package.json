@@ -65,18 +65,18 @@
     "gulp-webp": "^4.0.1",
     "gulp-webp-html-nosvg": "^1.0.6",
     "gulp-zip": "^5.1.0",
+    "include-media": "^1.4.10",
     "postcss-csso": "^6.0.0",
     "prettier": "^2.6.2",
     "pug": "^3.0.2",
     "sass": "^1.50.0",
-    "stylelint": "^14.7.1",
-    "stylelint-config-htmlacademy": "^0.1.12",
+    "stylelint": "^14.8.2",
     "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-recommended-scss": "^6.0.0",
     "stylelint-order": "^5.0.0",
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
-    "include-media": "^1.4.10",
     "normalize.css": "^8.0.1"
   }
 }

@@ -4,8 +4,6 @@ mixin header
     +drop('10', 'gray').header__drop
     ul.header__sort-list.text--16.text--regular
       li.header__sort-item.header__sort-item--chosed
-        span.header__sort-icon
-          include ./icons/sort.svg
         button(type='button' aria-label='Сортировать по рейтингу').header__sort-button По рейтингу
       li.header__sort-item
         button(type='button' aria-label='Сортировать по цене').header__sort-button По цене

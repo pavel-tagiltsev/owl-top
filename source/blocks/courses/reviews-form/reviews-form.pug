@@ -1,6 +1,11 @@
 mixin reviews-form
   - const {method, action, autocomplete} = attributes
-    form(class!=attributes.class method!=method action!=action autocomplete!=autocomplete).reviews-form.text--14.text--regular
+    form(
+      class!=attributes.class
+      method!=method
+      action!=action
+      autocomplete!=autocomplete
+    ).reviews-form.text--14.text--regular
       +input('Напишите ваше имя')(
         name='name'
         type='text'
@@ -14,6 +19,25 @@ mixin reviews-form
         required='required'
       ).reviews-form__title.text--16.text--regular
       +rating(required='required').reviews-from__rating
+      //- fieldset
+      //- legend First rating:
+      //- input#no-rate(
+      //- name='rating'
+      //- type='radio'
+      //- value='0'
+      //- checked
+      //- aria-label='No rating.'
+      //- ).input-no-rate
+      //- input#second-rate1(name='rating' type='radio' value='1')
+      //- label(for='second-rate1' title='Terrible') 1 star
+      //- input#second-rate2(name='rating' type='radio' value='2')
+      //- label(for='second-rate2' title='Not good') 2 stars
+      //- input#second-rate3(name='rating' type='radio' value='3')
+      //- label(for='second-rate3' title='Average') 3 stars
+      //- input#second-rate4(name='rating' type='radio' value='4')
+      //- label(for='second-rate4' title='Very good') 4 stars
+      //- input#second-rate5(name='rating' type='radio' value='5')
+      //- label(for='second-rate5' title='Amazing') 5 stars
       +input('Напишите ваш отзыв')(
         name='review'
         type='textarea'

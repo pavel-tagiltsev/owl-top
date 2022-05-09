@@ -1,99 +1,149 @@
+$star-count: 5;
+$star-size: 20px;
+
+// images are stored using base64 encoding
+$img-stars-sprite: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiID8+CjxzdmcKICB3aWR0aD0iMjAiCiAgaGVpZ2h0PSc0MCcKICB2aWV3Qm94PSIwIDAgMjAgNDAiCiAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIgo+CiAgPHN2ZyB4PSIwIiB5PSIwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogICAgPHBhdGgKICAgICAgZD0iTTE5Ljk0NzcgNy41NTY4NkMxOS44MTYgNy4xMzQyNyAxOS40NTY4IDYuODM1MDggMTkuMDMzNSA2Ljc5NTExTDEzLjI2MDEgNi4yNDgxNkwxMC45Nzg0IDAuNjczODU5QzEwLjgxIDAuMjY0MzIxIDEwLjQyNjcgMCAxMCAwQzkuNTczMzcgMCA5LjE4OTkxIDAuMjY0MzIxIDkuMDIyNTIgMC42NzM4NTlMNi43NDA4NCA2LjI0ODE2TDAuOTY2NTE5IDYuNzk1MTFDMC41NDMyMzMgNi44MzU4NyAwLjE4NDc5OSA3LjEzNTA3IDAuMDUyMzUwNiA3LjU1Njg2Qy0wLjA3OTMzNDggNy45Nzk0NiAwLjA0MjI3OTYgOC40NDI5OCAwLjM2MjQxNCA4LjczNTk2TDQuNzI2NjUgMTIuNzI5M0wzLjQzOTg1IDE4LjY0MzRDMy4zNDU3MSAxOS4wNzgyIDMuNTA3NDUgMTkuNTI3OSAzLjg1MzIyIDE5Ljc4ODdDNC4wMzkwOCAxOS45Mjk2IDQuMjU3NDMgMjAgNC40NzY1NSAyMEM0LjY2NDg1IDIwIDQuODUzMyAxOS45NDc4IDUuMDIxNiAxOS44NDI3TDEwIDE2LjczNjRMMTQuOTc3NSAxOS44NDI3QzE1LjM0MjcgMjAuMDcwNCAxNS44MDE4IDIwLjA0OTUgMTYuMTQ2OCAxOS43ODg3QzE2LjQ5MjYgMTkuNTI3OSAxNi42NTQzIDE5LjA3ODIgMTYuNTYwMiAxOC42NDM0TDE1LjI3MzQgMTIuNzI5M0wxOS42Mzc2IDguNzM1OTZDMTkuOTU3NiA4LjQ0Mjk4IDIwLjA3OTQgNy45ODA0MSAxOS45NDc3IDcuNTU2ODZaIgogICAgICBmaWxsPSIjRTJFMkUyIgogICAgLz4KICA8L3N2Zz4KICA8c3ZnIHg9IjAiIHk9IjIwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogICAgPHBhdGgKICAgICAgZD0iTTE5Ljk0NzcgNy41NTY4NkMxOS44MTYgNy4xMzQyNyAxOS40NTY4IDYuODM1MDggMTkuMDMzNSA2Ljc5NTExTDEzLjI2MDEgNi4yNDgxNkwxMC45Nzg0IDAuNjczODU5QzEwLjgxIDAuMjY0MzIxIDEwLjQyNjcgMCAxMCAwQzkuNTczMzcgMCA5LjE4OTkxIDAuMjY0MzIxIDkuMDIyNTIgMC42NzM4NTlMNi43NDA4NCA2LjI0ODE2TDAuOTY2NTE5IDYuNzk1MTFDMC41NDMyMzMgNi44MzU4NyAwLjE4NDc5OSA3LjEzNTA3IDAuMDUyMzUwNiA3LjU1Njg2Qy0wLjA3OTMzNDggNy45Nzk0NiAwLjA0MjI3OTYgOC40NDI5OCAwLjM2MjQxNCA4LjczNTk2TDQuNzI2NjUgMTIuNzI5M0wzLjQzOTg1IDE4LjY0MzRDMy4zNDU3MSAxOS4wNzgyIDMuNTA3NDUgMTkuNTI3OSAzLjg1MzIyIDE5Ljc4ODdDNC4wMzkwOCAxOS45Mjk2IDQuMjU3NDMgMjAgNC40NzY1NSAyMEM0LjY2NDg1IDIwIDQuODUzMyAxOS45NDc4IDUuMDIxNiAxOS44NDI3TDEwIDE2LjczNjRMMTQuOTc3NSAxOS44NDI3QzE1LjM0MjcgMjAuMDcwNCAxNS44MDE4IDIwLjA0OTUgMTYuMTQ2OCAxOS43ODg3QzE2LjQ5MjYgMTkuNTI3OSAxNi42NTQzIDE5LjA3ODIgMTYuNTYwMiAxOC42NDM0TDE1LjI3MzQgMTIuNzI5M0wxOS42Mzc2IDguNzM1OTZDMTkuOTU3NiA4LjQ0Mjk4IDIwLjA3OTQgNy45ODA0MSAxOS45NDc3IDcuNTU2ODZaIgogICAgICBmaWxsPSIjNzY1M2ZjIgogICAgLz4KICA8L3N2Zz4KPC9zdmc+Cg==");
+$img-stars-sprite-2x: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiID8+CjxzdmcKICB3aWR0aD0iMjAiCiAgaGVpZ2h0PSc0MCcKICB2aWV3Qm94PSIwIDAgMjAgNDAiCiAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIgo+CiAgPHN2ZyB4PSIwIiB5PSIwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogICAgPHBhdGgKICAgICAgZD0iTTE5Ljk0NzcgNy41NTY4NkMxOS44MTYgNy4xMzQyNyAxOS40NTY4IDYuODM1MDggMTkuMDMzNSA2Ljc5NTExTDEzLjI2MDEgNi4yNDgxNkwxMC45Nzg0IDAuNjczODU5QzEwLjgxIDAuMjY0MzIxIDEwLjQyNjcgMCAxMCAwQzkuNTczMzcgMCA5LjE4OTkxIDAuMjY0MzIxIDkuMDIyNTIgMC42NzM4NTlMNi43NDA4NCA2LjI0ODE2TDAuOTY2NTE5IDYuNzk1MTFDMC41NDMyMzMgNi44MzU4NyAwLjE4NDc5OSA3LjEzNTA3IDAuMDUyMzUwNiA3LjU1Njg2Qy0wLjA3OTMzNDggNy45Nzk0NiAwLjA0MjI3OTYgOC40NDI5OCAwLjM2MjQxNCA4LjczNTk2TDQuNzI2NjUgMTIuNzI5M0wzLjQzOTg1IDE4LjY0MzRDMy4zNDU3MSAxOS4wNzgyIDMuNTA3NDUgMTkuNTI3OSAzLjg1MzIyIDE5Ljc4ODdDNC4wMzkwOCAxOS45Mjk2IDQuMjU3NDMgMjAgNC40NzY1NSAyMEM0LjY2NDg1IDIwIDQuODUzMyAxOS45NDc4IDUuMDIxNiAxOS44NDI3TDEwIDE2LjczNjRMMTQuOTc3NSAxOS44NDI3QzE1LjM0MjcgMjAuMDcwNCAxNS44MDE4IDIwLjA0OTUgMTYuMTQ2OCAxOS43ODg3QzE2LjQ5MjYgMTkuNTI3OSAxNi42NTQzIDE5LjA3ODIgMTYuNTYwMiAxOC42NDM0TDE1LjI3MzQgMTIuNzI5M0wxOS42Mzc2IDguNzM1OTZDMTkuOTU3NiA4LjQ0Mjk4IDIwLjA3OTQgNy45ODA0MSAxOS45NDc3IDcuNTU2ODZaIgogICAgICBmaWxsPSIjRTJFMkUyIgogICAgLz4KICA8L3N2Zz4KICA8c3ZnIHg9IjAiIHk9IjIwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogICAgPHBhdGgKICAgICAgZD0iTTE5Ljk0NzcgNy41NTY4NkMxOS44MTYgNy4xMzQyNyAxOS40NTY4IDYuODM1MDggMTkuMDMzNSA2Ljc5NTExTDEzLjI2MDEgNi4yNDgxNkwxMC45Nzg0IDAuNjczODU5QzEwLjgxIDAuMjY0MzIxIDEwLjQyNjcgMCAxMCAwQzkuNTczMzcgMCA5LjE4OTkxIDAuMjY0MzIxIDkuMDIyNTIgMC42NzM4NTlMNi43NDA4NCA2LjI0ODE2TDAuOTY2NTE5IDYuNzk1MTFDMC41NDMyMzMgNi44MzU4NyAwLjE4NDc5OSA3LjEzNTA3IDAuMDUyMzUwNiA3LjU1Njg2Qy0wLjA3OTMzNDggNy45Nzk0NiAwLjA0MjI3OTYgOC40NDI5OCAwLjM2MjQxNCA4LjczNTk2TDQuNzI2NjUgMTIuNzI5M0wzLjQzOTg1IDE4LjY0MzRDMy4zNDU3MSAxOS4wNzgyIDMuNTA3NDUgMTkuNTI3OSAzLjg1MzIyIDE5Ljc4ODdDNC4wMzkwOCAxOS45Mjk2IDQuMjU3NDMgMjAgNC40NzY1NSAyMEM0LjY2NDg1IDIwIDQuODUzMyAxOS45NDc4IDUuMDIxNiAxOS44NDI3TDEwIDE2LjczNjRMMTQuOTc3NSAxOS44NDI3QzE1LjM0MjcgMjAuMDcwNCAxNS44MDE4IDIwLjA0OTUgMTYuMTQ2OCAxOS43ODg3QzE2LjQ5MjYgMTkuNTI3OSAxNi42NTQzIDE5LjA3ODIgMTYuNTYwMiAxOC42NDM0TDE1LjI3MzQgMTIuNzI5M0wxOS42Mzc2IDguNzM1OTZDMTkuOTU3NiA4LjQ0Mjk4IDIwLjA3OTQgNy45ODA0MSAxOS45NDc3IDcuNTU2ODZaIgogICAgICBmaWxsPSIjNzY1M2ZjIgogICAgLz4KICA8L3N2Zz4KPC9zdmc+Cg==");
+
+// if true there is an outline around the active star
+$accessible-highlight: false;
+
+// if true there is an outline around all stars when using keyboard and no rate is selected
+$accessible-focus: true;
+
+// if true, stars are highlighted on hover (causes website repaints)
+$hover-enabled: true;
+
 .rating {
-  display: flex;
-  margin: 0;
+  position: relative;
+
+  display: block;
+  width: $star-count * $star-size;
+  min-height: 2 * $star-size;
   padding: 0;
 
   border: none;
-}
 
-.rating__caption {
-  margin-right: 20px;
-}
+  >input {
+    @include visually-hidden;
 
-.rating__input {
-  @include visually-hidden;
-  bottom: 0;
+    position: absolute;
 
-  &:checked + .rating__star {
-    background-image: url("../images/star-checked.svg");
-  }
-}
-
-.rating__label {
-  @include visually-hidden;
-}
-
-.rating__star {
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  height: 20px;
-  margin: 0;
-
-  cursor: pointer;
-
-  appearance: none;
-
-  &:focus {
-    outline: none;
+    width: $star-size;
+    height: $star-size;
   }
 
-  &--active {
-    &:hover ~ .rating__star {
-      background-image: url("../images/star.svg");
+  >input:checked ~ label,
+  >input:focus ~ label {
+    background-position: 0 0;
+  }
+
+  >input:checked + label,
+  >input:focus + label {
+    background-position: 0 (-$star-size);
+  }
+
+  >input:invalid + label {
+    background-position: 0 0;
+  }
+
+  >input[disabled]:hover + label {
+    cursor: default;
+  }
+
+  >label {
+    position: relative;
+
+    float: left;
+    width: $star-size;
+    height: $star-size;
+
+    color: transparent;
+    font-size: 0.1em;
+
+    background-image: $img-stars-sprite;
+    background-repeat: no-repeat;
+    background-position: 0 (-$star-size);
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+
+      display: block;
+      height: $star-size;
+
+      background-image: $img-stars-sprite;
+      background-position: 0 $star-size;
+      opacity: 0;
+
+      content: "";
+      pointer-events: none;
     }
 
-    &:hover {
-      background-image: url("../images/star-checked.svg");
+    @if $hover-enabled {
+      // This function makes sure the right number of stars is highlighted
+      $star-count-highlight: $star-count;
+
+      /* stylelint-disable-next-line max-nesting-depth */
+      @while $star-count-highlight > 0 {
+        $star-number: $star-count-highlight;
+
+        &:nth-of-type(#{$star-number})::before {
+          left: -($star-number * $star-size - $star-size);
+
+          width: $star-number * $star-size - $star-size;
+        }
+
+        $star-count-highlight: $star-count-highlight - 1;
+      }
+    }
+
+    @media screen and (min-resolution: 192dpi) {
+      background-image: $img-stars-sprite-2x;
+      background-size: $star-size auto;
     }
   }
 
-  &--fake {
-    background-image: url("../images/star-checked.svg");
+  @if $hover-enabled {
+    >input:not([disabled]):hover ~ label {
+      background-position: 0 0;
+    }
+
+    >input:not([disabled]):hover + label {
+      background-position: 0 (-$star-size);
+    }
+
+    >input:not([disabled]):hover + label::before {
+      opacity: 1;
+    }
   }
 
-  &:nth-of-type(2) {
-    z-index: 4;
-
-    width: 40px;
+  @if $accessible-highlight {
+    >input:focus + label {
+      outline: 2px solid $outline-color;
+    }
   }
 
-  &:nth-of-type(3) {
-    z-index: 3;
+  @if $accessible-focus {
+    .rating__focuse {
+      position: absolute;
+      left: 0;
 
-    width: 60px;
-  }
+      width: 100%;
+      height: $star-size;
 
-  &:nth-of-type(4) {
-    z-index: 2;
+      outline: 2px solid $outline-color;
+      opacity: 0;
 
-    width: 80px;
-  }
+      pointer-events: none;
+    }
 
-  &:nth-of-type(5) {
-    z-index: 1;
-
-    width: 100px;
+    >input:focus ~ .rating__focuse {
+      opacity: 1;
+    }
   }
 }
 
-
-.rating__group {
-  position: relative;
-
-  width: 100px;
-  height: 20px;
-
-  background-image: url("../images/star.svg");
-}
-
-.rating__group:focus-within {
-  outline: 2px $outline-color solid;
-}
-
-.rating__star:nth-of-type(1) {
-  z-index: 5;
-
-  width: 20px;
+.rating__legend {
+  @include visually-hidden;
 }

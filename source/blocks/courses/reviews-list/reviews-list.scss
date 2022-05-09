@@ -54,7 +54,8 @@
     width: 30px;
     height: 30px;
 
-    background-image: url("../images/user.svg");
+    background-image: url("../images/stack-sprite.svg#user");
+    background-repeat: no-repeat;
 
     content: "";
   }

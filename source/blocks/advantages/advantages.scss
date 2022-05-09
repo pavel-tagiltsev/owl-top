@@ -29,9 +29,10 @@
     height: 50px;
 
     background-color: #c8f8e4;
-    background-image: url("../images/check.svg");
+    background-image: url("../images/stack-sprite.svg#check");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 24px 24px;
     border-radius: 100px;
 
     content: "";

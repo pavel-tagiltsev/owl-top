@@ -1,6 +1,4 @@
 .navigation {
-  padding-left: 45px;
-
   color: $gray-1;
 }
 
@@ -14,12 +12,14 @@
 .navigation__first-item {
   position: relative;
 
+  padding-left: 45px;
+
   &--opened > .navigation__first-title {
     color: $primary;
-  }
 
-  &--opened > .navigation__icon > svg {
-    fill: $primary;
+    &::before {
+      filter: $filter-primary;
+    }
   }
 
   &--opened > .navigation__second-list {
@@ -34,12 +34,42 @@
 
   cursor: pointer;
 
+  &::before {
+    position: absolute;
+    top: -3px;
+    left: 0;
+
+    width: 24px;
+    height: 24px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+
+    content: "";
+  }
+
+  &--hat::before {
+    background-image: url("../images/stack-sprite.svg#graduation-hat");
+  }
+
+  &--cloud::before {
+    background-image: url("../images/stack-sprite.svg#cloud");
+  }
+
+  &--book::before {
+    background-image: url("../images/stack-sprite.svg#book");
+  }
+
+  &--box::before {
+    background-image: url("../images/stack-sprite.svg#box");
+  }
+
   &:hover,
   &:focus {
     color: $primary;
 
-    & + .navigation__icon > svg {
-      fill: $primary;
+    &::before {
+      filter: $filter-primary;
     }
   }
 }

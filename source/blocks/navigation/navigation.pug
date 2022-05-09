@@ -43,25 +43,25 @@
      {
        firstTitle: 'Курсы',
        opened: true,
-       icon: './icons/graduation-hat.svg',
+       icon: 'hat',
        secondList
      },
      {
        firstTitle: 'Сервисы',
        opened: false,
-        icon: './icons/cloud.svg',
+        icon: 'cloud',
        secondList
      },
      {
        firstTitle: 'Книги',
        opened: false,
-        icon: './icons/book.svg',
+        icon: 'book',
        secondList
      },
      {
        firstTitle: 'Товары',
        opened: false,
-        icon: './icons/box.svg',
+        icon: 'box',
        secondList
      }
    ];
@@ -69,51 +69,33 @@
 mixin thirdList(secondItem)
   ul.navigation__third-list
     each thirdItem in secondItem.thirdList
-      if thirdItem.opened
-        li(data-receiver='third').navigation__third-item.navigation__third-item--opened
-          a(href='#' data-toggel='third').navigation__third-title.text--14.text--medium= thirdItem.thirdTitle
-      else
-        li(data-receiver='third').navigation__third-item
-          a(href='#' data-toggel='third').navigation__third-title.text--14.text--medium= thirdItem.thirdTitle
+      li(
+        class!=thirdItem.opened ? 'navigation__third-item--opened' : ''
+        data-receiver='third'
+      ).navigation__third-item
+        a(href='#' data-toggel='third').navigation__third-title.text--14.text--medium= thirdItem.thirdTitle
 
 mixin secondList(firstItem)
   ul.navigation__second-list
     each secondItem in firstItem.secondList
-      if secondItem.opened
-        li(data-receiver='second').navigation__second-item.navigation__second-item--opened
-          span(tabindex='0' data-toggel='second').navigation__second-title.text--12.text--light= secondItem.secondTitle
-          +thirdList(secondItem)
-      else
-        li(data-receiver='second').navigation__second-item
-          span(tabindex='0' data-toggel='second').navigation__second-title.text--12.text--light= secondItem.secondTitle
-          +thirdList(secondItem)
-
-mixin navigation-icon(icon)
-  case icon
-    when './icons/graduation-hat.svg'
-      span.navigation__icon.navigation__icon--hat
-        include ./icons/graduation-hat.svg
-    when './icons/cloud.svg'
-      span.navigation__icon.navigation__icon--cloud
-        include ./icons/cloud.svg
-    when './icons/book.svg'
-      span.navigation__icon.navigation__icon--book
-        include ./icons/book.svg
-    when './icons/box.svg'
-      span.navigation__icon.navigation__icon--box
-        include ./icons/box.svg
+      li(
+        class!=secondItem.opened ? 'navigation__second-item--opened' : ''
+        data-receiver='second'
+      ).navigation__second-item
+        span(tabindex='0' data-toggel='second').navigation__second-title.text--12.text--light= secondItem.secondTitle
+        +thirdList(secondItem)
 
 mixin navigation
   nav(class!=attributes.class).navigation
     ul.navigation__first-list
       each firstItem in firstLists
-        if firstItem.opened
-          li(data-receiver='first').navigation__first-item.navigation__first-item--opened
-            span(tabindex='0' data-toggel='first').navigation__first-title.text--18.text--medium= firstItem.firstTitle
-            +navigation-icon(firstItem.icon)
-            +secondList(firstItem)
-        else
-          li(data-receiver='first').navigation__first-item
-            span(tabindex='0' data-toggel='first').navigation__first-title.text--18.text--medium= firstItem.firstTitle
-            +navigation-icon(firstItem.icon)
-            +secondList(firstItem)
+        li(
+          class!=firstItem.opened ? 'navigation__first-item--opened' : ''
+          data-receiver='first'
+        ).navigation__first-item
+          span(
+            class!='navigation__first-title--' + firstItem.icon
+            tabindex='0'
+            data-toggel='first'
+          ).navigation__first-title.text--18.text--medium= firstItem.firstTitle
+          +secondList(firstItem)

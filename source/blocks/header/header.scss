@@ -48,6 +48,26 @@
 }
 
 .header__sort-item {
+  &--chosed {
+    position: relative;
+
+    padding-left: 30px;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 20px;
+      height: 20px;
+
+      background-image: url("../images/stack-sprite.svg#sort");
+      background-repeat: no-repeat;
+
+      content: "";
+    }
+  }
+
   &--chosed > .header__sort-button {
     color: $primary;
     font-weight: 700;

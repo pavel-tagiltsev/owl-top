@@ -16,6 +16,8 @@ const stackConfig = {
     stack: {
       dest: '.',
       sprite: 'stack-sprite.svg',
+      // In order to enabel this option,
+      // look for solution in readme.md file in bug's section
       rootviewbox: false
     }
   }

@@ -23,7 +23,9 @@ export default function scss() {
       sass({
         includePaths: [
           './node_modules/normalize.css/',
-          './node_modules/include-media/dist/'
+          './node_modules/include-media/dist/',
+          './node_modules/starability/starability-scss/',
+          './node_modules/starability/starability-scss/starability/'
         ],
         outputStyle: 'expanded'
       })

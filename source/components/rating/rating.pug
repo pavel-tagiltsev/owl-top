@@ -1,57 +1,12 @@
--
-  const inputs = new Array(5).fill(null).map((_, i) => i + 1)
-  function declOfNum(n, text_forms) {
-    n = Math.abs(n) % 100;
-    var n1 = n % 10;
-    if (n > 10 && n < 20) { return text_forms[2]; }
-    if (n1 > 1 && n1 < 5) { return text_forms[1]; }
-    if (n1 == 1) { return text_forms[0]; }
-    return text_forms[2];
-  }
+mixin rating
+  fieldset.rating
+    legend.rating__legend Оценка курса:
 
-mixin rating(rating, fake)
-  if fake == 'fake'
-    div(class!=attributes.class).rating
-      .rating__group
-        each _, index in inputs
-          if rating >= index + 1
-            .rating__star.rating__star--fake
-          else
-            .rating__star
+    each star, index in starsCount
+      - const number = index + 1
+      - const inputId = `rate-input-${number}-${makeid(10)}`
 
-  else
-    if attributes.disabled == 'disabled'
-      fieldset(class!=attributes.class disabled!=attributes.disabled).rating
-        #rating-legend.rating__caption Оценка:
-        .rating__group
-          each _, index in inputs
-            - const id = `${Math.random()}-${index}`
-            - const value = index + 1
-              input(
-                name='rating'
-                type='radio'
-                id!=id
-                value!=value
-                required!=attributes.required
-                aria-labelledby='rating-legend'
-              ).rating__input
-              label(for!=id).rating__star--active
-                span.rating__label!= value + ' ' + declOfNum(value, ['звезда', 'звезды', 'звезд'])
+      input(name='rating' type='radio' id!=inputId value!=number required!=attributes.required)
+      label(for!=inputId)!= `${number} ${declOfNum(number, ['балл', 'балла', 'баллов'])} из 5`
 
-    else
-      fieldset(class!=attributes.class).rating
-        #rating-legend.rating__caption Оценка:
-        .rating__group
-          each _, index in inputs
-            - const id = `${Math.random()}-${index}`
-            - const value = index + 1
-              input(
-                name='rating'
-                type='radio'
-                id!=id
-                value!=value
-                required!=attributes.required
-                aria-labelledby='rating-legend'
-              ).rating__input
-              label(for!=id).rating__star.rating__star--active
-                span.rating__label!= value + ' ' + declOfNum(value, ['звезда', 'звезды', 'звезд'])
+    span.rating__focuse

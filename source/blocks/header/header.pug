@@ -2,8 +2,4 @@ mixin header
   header(class!=attributes.class).header
     h1.header__title Курсы по Photoshop
       +drop('10', 'gray').header__drop
-    ul.header__sort-list
-      li.header__sort-item.header__sort-item--chosed
-        button(type='button' aria-label='Сортировать по рейтингу').header__sort-button По рейтингу
-      li.header__sort-item
-        button(type='button' aria-label='Сортировать по цене').header__sort-button По цене
+    +sort.header__sort-list

@@ -10,40 +10,17 @@ mixin reviews-form
         name='name'
         type='text'
         placeholder='Имя'
-        required='required'
       ).reviews-form__name.text--16.text--regular
       +input('Напишите заголовок отзыва')(
         name='title'
         type='text'
         placeholder='Заголовок отзыва'
-        required='required'
       ).reviews-form__title.text--16.text--regular
       +rating(required='required').reviews-from__rating
-      //- fieldset
-      //- legend First rating:
-      //- input#no-rate(
-      //- name='rating'
-      //- type='radio'
-      //- value='0'
-      //- checked
-      //- aria-label='No rating.'
-      //- ).input-no-rate
-      //- input#second-rate1(name='rating' type='radio' value='1')
-      //- label(for='second-rate1' title='Terrible') 1 star
-      //- input#second-rate2(name='rating' type='radio' value='2')
-      //- label(for='second-rate2' title='Not good') 2 stars
-      //- input#second-rate3(name='rating' type='radio' value='3')
-      //- label(for='second-rate3' title='Average') 3 stars
-      //- input#second-rate4(name='rating' type='radio' value='4')
-      //- label(for='second-rate4' title='Very good') 4 stars
-      //- input#second-rate5(name='rating' type='radio' value='5')
-      //- label(for='second-rate5' title='Amazing') 5 stars
       +input('Напишите ваш отзыв')(
         name='review'
         type='textarea'
         placeholder='Текст отзыва'
-        spellcheck='true'
-        required='required'
       ).reviews-form__message.text--16.text--regular
       footer.reviews-form__footer
         +button('Отправить')(type='submit').reviews-form__button

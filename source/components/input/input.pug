@@ -1,9 +1,25 @@
 mixin input(label)
-  - const {name, type, placeholder, desabled, required, spellcheck} = attributes
+  - const {
+      name = 'name',
+      type = 'text',
+      placeholder = 'Текст подсказка',
+      desabled = 'false',
+      required = 'required',
+      spellcheck = 'true',
+      method = 'get',
+      action = '#',
+      autocomplete = 'off'
+    } = attributes
 
   case type
     when 'search'
-      div(class!=attributes.class).input.input--search
+      form(
+        class!=attributes.class
+        method!=method
+        action!=action
+        autocomplete!=autocomplete
+        role='search'
+      ).input.input--search
         label
           span.input__label= label
           input(
@@ -13,7 +29,7 @@ mixin input(label)
             disabled!=disabled
             required!=required
           ).input__input
-        +button('', 'primary', 'search')(type='button' disabled!=disabled).input__button
+        +button('', 'primary', 'search')(type='submit' disabled!=disabled).input__button
 
     when 'textarea'
       label(class!=attributes.class).input.input--textarea

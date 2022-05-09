@@ -1,29 +1,21 @@
-.aside {
-  display: grid;
-  grid-template-rows: [logo] min-content 20px [search] min-content 30px [navigation] min-content;
-  grid-template-columns: 1fr;
-
-  @include media("<tablet") {
-    display: none;
-  }
-}
+@import "./grid";
 
 .aside__logo {
   display: block;
-  grid-row: logo;
   width: 70%;
 }
 
 .aside__logo-img {
   display: block;
-  width: 159px;
-  height: 44px;
-}
+  width: 160px;
+  height: 45px;
 
-.aside__search {
-  grid-row: search;
-}
+  &:hover,
+  &:focus {
+    opacity: 0.9;
+  }
 
-.aside__navigation {
-  grid-row: navigation;
+  &:active {
+    opacity: 0.7;
+  }
 }

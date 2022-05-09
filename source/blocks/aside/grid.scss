@@ -1,0 +1,21 @@
+.aside {
+  display: grid;
+  grid-template-rows: min-content 15px min-content 30px min-content;
+  grid-template-columns: 1fr;
+
+  @include media("<tablet") {
+    display: none;
+  }
+}
+
+.aside__logo {
+  grid-row: 1;
+}
+
+.aside__search {
+  grid-row: 3;
+}
+
+.aside__navigation {
+  grid-row: 5;
+}

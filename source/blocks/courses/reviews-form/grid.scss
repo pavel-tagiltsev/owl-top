@@ -46,7 +46,6 @@
 
 .reviews-from__annotation {
   grid-column: 2;
-  margin: 0;
 }
 
 @include media("<890px") {
@@ -60,7 +59,7 @@
     grid-column: 1;
   }
 
-  .reviews-from__rating {
+  .reviews-form__rating {
     grid-row: 1;
     grid-column: 2;
     justify-self: end;
@@ -72,7 +71,6 @@
   }
 
   .reviews-form__footer {
-
     grid-row: 4;
     grid-column: 1 / 3;
   }
@@ -92,7 +90,7 @@
     grid-column: 1 / 3;
   }
 
-  .reviews-from__rating {
+  .reviews-form__rating {
     grid-row: 3;
     grid-column: 1 / 3;
     justify-self: start;
@@ -107,10 +105,6 @@
     grid-row: 5;
     grid-column: 1 / 3;
     justify-self: start;
-  }
-
-  .reviews-form__button {
-    margin-bottom: 20px;
   }
 
   .reviews-from__annotation {

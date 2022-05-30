@@ -1,21 +1,21 @@
 @import "grid";
 
-.reviews-form__button {
-  @include media("<575px") {
-    margin-bottom: 20px;
-  }
+.reviews-form__rating {
+  display: flex;
+  align-items: center;
+}
+
+.reviews-form__rating-label {
+  margin: 0;
+  margin-right: 20px;
 }
 
 .reviews-form__annotation {
   margin: 0;
 }
 
-.reviews-form__rating {
-  display: flex;
-  align-items: start;
+@include media("<575px") {
+  .reviews-form__button {
+    margin-bottom: 20px;
+  }
 }
-
-.reviews-form__rating-label {
-  margin: 0;
-}
-

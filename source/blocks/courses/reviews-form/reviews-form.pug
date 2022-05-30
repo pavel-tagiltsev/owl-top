@@ -19,7 +19,7 @@ mixin reviews-form
       ).reviews-form__title.text--16.text--regular
 
       .reviews-form__rating
-        p.reviews-form__rating-label Оценка:
+        p(aria-hidden).reviews-form__rating-label Оценка:
         +rating(required='required')
 
       +input('Напишите ваш отзыв')(

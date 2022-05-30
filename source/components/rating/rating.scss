@@ -19,7 +19,7 @@ $hover-enabled: true;
 
   display: block;
   width: $star-count * $star-size;
-  min-height: 2 * $star-size;
+  min-height: $star-size;
   padding: 0;
 
   border: none;

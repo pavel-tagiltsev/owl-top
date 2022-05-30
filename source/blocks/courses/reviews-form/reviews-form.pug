@@ -11,17 +11,23 @@ mixin reviews-form
         type='text'
         placeholder='Имя'
       ).reviews-form__name.text--16.text--regular
+
       +input('Напишите заголовок отзыва')(
         name='title'
         type='text'
         placeholder='Заголовок отзыва'
       ).reviews-form__title.text--16.text--regular
-      +rating(required='required').reviews-from__rating
+
+      .reviews-form__rating
+        p.reviews-form__rating-label Оценка:
+        +rating(required='required')
+
       +input('Напишите ваш отзыв')(
         name='review'
         type='textarea'
         placeholder='Текст отзыва'
       ).reviews-form__message.text--16.text--regular
+
       footer.reviews-form__footer
         +button('Отправить')(type='submit').reviews-form__button
         p.reviews-from__annotation.text--lh24 * Перед публикацией отзыв пройдет предварительную модерацию и проверку

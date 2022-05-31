@@ -1,6 +1,4 @@
-.navigation {
-  color: $gray-1;
-}
+@import "fonts";
 
 .navigation__first-list {
   margin: 0;
@@ -15,8 +13,6 @@
   padding-left: 45px;
 
   &--opened > .navigation__first-title {
-    color: $primary;
-
     &::before {
       filter: $filter-primary;
     }
@@ -31,9 +27,6 @@
 .navigation__first-title {
   display: inline-block;
   margin-bottom: 20px;
-
-  font-weight: 500;
-  font-size: 18px;
 
   cursor: pointer;
 
@@ -69,8 +62,6 @@
 
   &:hover,
   &:focus {
-    color: $primary;
-
     &::before {
       filter: $filter-primary;
     }
@@ -115,16 +106,7 @@
   display: inline-block;
   margin-bottom: 10px;
 
-  font-weight: 300;
-  font-size: 12px;
-  text-transform: uppercase;
-
   cursor: pointer;
-
-  &:hover,
-  &:focus {
-    color: $primary;
-  }
 }
 
 .navigation__third-list {
@@ -140,19 +122,5 @@
 
   &:last-child {
     margin-bottom: 20px;
-  }
-
-  &--opened {
-    color: $primary;
-  }
-}
-
-.navigation__third-title {
-  font-weight: 500;
-  font-size: 14px;
-
-  &:hover,
-  &:focus {
-    color: $primary;
   }
 }

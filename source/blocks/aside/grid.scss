@@ -2,10 +2,6 @@
   display: grid;
   grid-template-rows: min-content 15px min-content 30px min-content;
   grid-template-columns: 1fr;
-
-  @include media("<tablet") {
-    display: none;
-  }
 }
 
 .aside__logo {
@@ -18,4 +14,10 @@
 
 .aside__navigation {
   grid-row: 5;
+}
+
+@include media("<tablet") {
+  .aside {
+    display: none;
+  }
 }

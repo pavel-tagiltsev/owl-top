@@ -1,7 +1,7 @@
 mixin course-content
   div(class!=attributes.class).course-content
     h3.visually-hidden Краткое описание
-    p.course-content__description.text--16.text--regular.text--lh24
+    p.course-content__description
       | Студенты освоят не только hard skills, необходимые для работы веб-дизайнером,
       | но и soft skills — навыки, которые позволят эффективно взаимодействовать в команде с менеджерами,
       | разработчиками и маркетологами. Выпускники факультета могут успешно
@@ -10,23 +10,23 @@ mixin course-content
     .course-content__column.course-content__column--left
       dl.course-content__summary
         .course-content__summary-group
-          dt.course-content__summary-term.text--16.text--bold Документ об окончании
+          dt.course-content__summary-term Документ об окончании
           dt.course-content__summary-line
-          dd.course-content__summary-def.text--16.text--regular Диплом
+          dd.course-content__summary-def Диплом
         .course-content__summary-group
-          dt.course-content__summary-term.text--16.text--bold Сложность
+          dt.course-content__summary-term Сложность
           dt.course-content__summary-line
-          dd.course-content__summary-def.text--16.text--regular Начальная
+          dd.course-content__summary-def Начальная
         .course-content__summary-group
-          dt.course-content__summary-term.text--16.text--bold Длительность
+          dt.course-content__summary-term Длительность
           dt.course-content__summary-line
-          dd.course-content__summary-def.text--16.text--regular 5 месяцев
+          dd.course-content__summary-def 5 месяцев
       +hashtags(['Гарантия трудоустройства'], 'ghost')
 
     .course-content__column.course-content__column--right
-      h3.course-content__features-title.text--16.text--bold Преимущества
-      p.course-content__features-content.course-content__features-content--advantages.text--16.text--regular.text--lh22
+      h3.course-content__features-title Преимущества
+      p.course-content__features-content.course-content__features-content--advantages
         | Хорошо структурирован курс, быстрый отклик преподователей, качество подачи материал
-      h3.course-content__features-title.text--16.text--bold Недостатки
-      p.course-content__features-content.course-content__features-content--disadvantages.text--16.text--regular.text--lh22
+      h3.course-content__features-title Недостатки
+      p.course-content__features-content.course-content__features-content--disadvantages
         | Некоторое темы раскрыты не до конца

@@ -1,13 +1,9 @@
-@import "./grid";
+@import "grid";
+@import "fonts";
 
 .sort {
   margin: 0;
   padding: 0;
-
-  font-weight: 400;
-  font-size: 16px;
-
-  column-gap: 40px;
 
   list-style: none;
 }
@@ -35,7 +31,6 @@
 
   &--chosed > .sort__button {
     color: $primary;
-    font-weight: 700;
 
     &:hover,
     &:focus {

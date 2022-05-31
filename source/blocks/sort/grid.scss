@@ -4,3 +4,9 @@
 
   column-gap: 40px;
 }
+
+@include media("<650px") {
+  .sort {
+    grid-template-columns: auto 1fr;
+  }
+}

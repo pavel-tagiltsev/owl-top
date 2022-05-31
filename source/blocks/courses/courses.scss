@@ -3,6 +3,7 @@
 @import "./course-footer/course-footer";
 @import "./reviews-list/reviews-list";
 @import "./reviews-form/reviews-form";
+@import "grid";
 
 .courses {
   margin: 0;
@@ -21,60 +22,41 @@
 }
 
 .courses__course {
-  display: grid;
-  grid-template-rows: [header] auto [content] auto [footer] auto [reviews] auto;
-  grid-template-columns: 1fr;
   padding: 30px;
-
-  row-gap: 20px;
 
   background-color: $white-primary;
   border-radius: $border-radius-primary;
   box-shadow: $shadow-primary;
-
-  @include media("<575px") {
-    padding: 20px;
-  }
 }
 
 .courses__course-header {
-  grid-row: header;
   padding-bottom: 20px;
 
   border-bottom: 1px solid $button-ghost-border-color;
 }
 
-.courses__course-content {
-  grid-row: content;
-}
-
 .courses__course-footer {
-  grid-row: footer;
   padding-top: 20px;
 
   border-top: 1px solid #ebebeb;
 }
 
 .courses__course-reviews {
-  display: grid;
-  grid-row: reviews;
-  grid-template-rows: [list] auto [form] auto;
-  grid-template-columns: 1fr;
   margin: 0 -30px -30px;
   padding: 30px;
-  row-gap: 20px;
 
   background-color: #f9f8ff;
   border-radius: $border-radius-primary;
 }
 
-.courses__course-reviews-list {
-  grid-row: list;
-}
-
 .courses__course-reviews-form {
-  grid-row: form;
   padding-top: 20px;
 
   border-top: 1px solid #ebebeb;
+}
+
+@include media("<575px") {
+  .courses__course {
+    padding: 20px;
+  }
 }

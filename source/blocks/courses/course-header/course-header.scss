@@ -1,4 +1,5 @@
-@import "./grid";
+@import "grid";
+@import "fonts";
 
 .course-header__logo {
   display: block;
@@ -8,21 +9,11 @@
 
 .course-header__title {
   margin: 0;
-
-  font-weight: 600;
-  font-size: 20px;
-
-  @include media("<575px") {
-    text-align: center;
-  }
 }
 
 .course-header__term {
   display: flex;
   margin: 0;
-
-  font-weight: 400;
-  font-size: 20px;
 }
 
 .course-header__discount {
@@ -31,7 +22,4 @@
 
 .course-header__def {
   margin: 0;
-
-  font-weight: 300;
-  font-size: 14px;
 }

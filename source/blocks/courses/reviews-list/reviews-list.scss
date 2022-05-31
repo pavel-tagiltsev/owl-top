@@ -1,11 +1,9 @@
 @import "grid";
+@import "fonts";
 
 .reviews-list {
   margin: 0;
   padding: 0;
-
-  font-weight: 400;
-  font-size: 14px;
 
   list-style: none;
 }
@@ -32,9 +30,6 @@
   margin-right: 5px;
   padding-left: 40px;
 
-  font-weight: bold;
-  font-style: normal;
-
   &::before {
     position: absolute;
     top: -7.5px;
@@ -52,8 +47,6 @@
 
 .reviews-list__title {
   margin: 0;
-
-  font-weight: inherit;
 }
 
 .reviews-list__title-quote {
@@ -68,6 +61,4 @@
 
 .reviews-list__quote {
   margin: 0;
-
-  line-height: 24px;
 }

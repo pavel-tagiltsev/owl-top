@@ -112,7 +112,6 @@
   .course-header {
     grid-template-rows: auto 15px auto 15px auto 25px repeat(3, auto 5px auto 15px);
     grid-template-columns: 1fr;
-    justify-items: center;
   }
 
   .course-header__logo {

@@ -4,6 +4,12 @@
 }
 
 .sort__item--chosed > .sort__button {
+  color: $primary;
   font-weight: 700;
+}
+
+.sort__button {
+  color: inherit;
+  font-weight: inherit;
 }
 

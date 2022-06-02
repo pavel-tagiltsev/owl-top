@@ -1,8 +1,8 @@
-include course-header/course-header.pug
-include course-content/course-content.pug
-include course-footer/course-footer.pug
-include reviews-list/reviews-list.pug
-include reviews-form/reviews-form.pug
+include course-header/course-header
+include course-content/course-content
+include course-footer/course-footer
+include reviews-list/reviews-list
+include reviews-form/reviews-form
 
 mixin courses
   ul.courses
@@ -17,4 +17,8 @@ mixin courses
         .courses__course-reviews
           +reviews-list.courses__course-reviews-list
 
-          +reviews-form(method='post' action='#' autocomplete='off').courses__course-reviews-form
+          +reviews-form(
+            method='post'
+            action='#'
+            autocomplete='off'
+          ).courses__course-reviews-form

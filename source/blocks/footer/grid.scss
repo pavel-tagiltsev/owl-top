@@ -22,7 +22,7 @@
   column-gap: 40px;
 }
 
-@include media("<1040px") {
+@include media("<desktop") {
   .footer__inner {
     grid-template-rows: auto auto;
     justify-content: center;
@@ -39,7 +39,7 @@
   }
 }
 
-@include media("<660px") {
+@include media("<tablet") {
   .footer {
     column-gap: 15px;
   }

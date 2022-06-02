@@ -108,7 +108,7 @@
   }
 }
 
-@include media("<575px") {
+@include media("<tablet") {
   .course-header {
     grid-template-rows: auto 15px auto 15px auto 25px repeat(3, auto 5px auto 15px);
     grid-template-columns: 1fr;

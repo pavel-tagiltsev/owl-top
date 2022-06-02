@@ -16,7 +16,7 @@
   list-style: none;
 }
 
-@include media("<1040px") {
+@include media("<desktop") {
   .footer {
     min-height: 150px;
     padding-top: 20px;

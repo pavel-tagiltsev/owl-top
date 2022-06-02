@@ -15,7 +15,7 @@
   }
 }
 
-@include media("<450px") {
+@include media("<tablet") {
   .course-footer {
     grid-template-columns: 150px;
   }

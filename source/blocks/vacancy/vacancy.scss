@@ -72,7 +72,7 @@
     background-image: url("../images/stack-sprite.svg#senior");
   }
 
-  @include media("<575px") {
+  @include media("<tablet") {
     margin-right: 40px;
     margin-left: 40px;
     padding-top: 20px;

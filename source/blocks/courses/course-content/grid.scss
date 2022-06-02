@@ -25,7 +25,7 @@
   }
 }
 
-@include media("<890px") {
+@include media("<desktop") {
   .course-content {
     grid-template-rows: auto auto auto;
     grid-template-columns: 1fr;

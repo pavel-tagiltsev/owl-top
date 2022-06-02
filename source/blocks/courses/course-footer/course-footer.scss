@@ -1,6 +1,6 @@
 @import "grid";
 
-@include media("<450px") {
+@include media("<tablet") {
   .course-footer__button {
     margin-bottom: 10px;
 

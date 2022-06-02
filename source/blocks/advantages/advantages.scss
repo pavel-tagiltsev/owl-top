@@ -41,10 +41,6 @@
   &:last-child {
     margin-bottom: 0;
   }
-
-  @include media("<575px") {
-    padding-left: 70px;
-  }
 }
 
 .advantages__item-title {
@@ -68,9 +64,15 @@
     background-color: #d2d2d2;
 
     content: "";
+  }
+}
 
-    @include media("<575px") {
-      left: -45px;
-    }
+@include media("<tablet") {
+  .advantages__item {
+    padding-left: 70px;
+  }
+
+  .advantages__item-text::before {
+    left: -45px;
   }
 }

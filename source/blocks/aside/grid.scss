@@ -16,7 +16,7 @@
   grid-row: 5;
 }
 
-@include media("<tablet") {
+@include media("<desktop") {
   .aside {
     display: none;
   }

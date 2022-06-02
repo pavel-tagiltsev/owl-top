@@ -15,7 +15,7 @@
   margin: 0;
 }
 
-@include media("<575px") {
+@include media("<tablet") {
   .reviews-form__button {
     margin-bottom: 20px;
   }

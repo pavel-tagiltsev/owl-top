@@ -68,7 +68,7 @@
   }
 }
 
-@include media("<500px") {
+@include media("<tablet") {
   .course-content__summary-group {
     flex-direction: column;
   }

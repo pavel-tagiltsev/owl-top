@@ -8,17 +8,6 @@
   min-height: 100vh;
 
   column-gap: 30px;
-
-  @include media("<tablet") {
-    grid-template-areas:
-      ". main ."
-      "footer footer footer";
-    grid-template-columns: 1fr minmax(280px, 1200px) 1fr;
-  }
-
-  @include media("<575px") {
-    column-gap: 20px;
-  }
 }
 
 .layout__aside {
@@ -32,4 +21,21 @@
 .layout__footer {
   grid-area: footer;
   min-height: 72px;
+}
+
+@include media("<desktop") {
+  .layout {
+    grid-template-areas:
+      ". main ."
+      "footer footer footer";
+    grid-template-columns: 1fr minmax(280px, 1200px) 1fr;
+
+    column-gap: 25px;
+  }
+}
+
+@include media("<tablet") {
+  .layout {
+    column-gap: 20px;
+  }
 }

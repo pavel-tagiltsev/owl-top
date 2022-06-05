@@ -27,6 +27,22 @@
   }
 
   .main-header__burger {
+    position: fixed;
+    top: 20px;
+    right: $tablet-paddings;
+    z-index: 1;
+
+    display: block;
+  }
+}
+
+@include media("<tablet") {
+  .main-header__burger {
+    position: fixed;
+    top: 20px;
+    right: $mobile-paddings;
+    z-index: 1;
+
     display: block;
   }
 }

@@ -17,7 +17,7 @@ export default class Toggler {
     this.onKeyDown = this.onKeyDown.bind(this)
   }
 
-  kremoveActiveClasses(elements, selector) {
+  removeActiveClasses(elements, selector) {
     elements.forEach((item) => {
       item.parentElement.classList.remove(selector)
     })

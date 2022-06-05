@@ -14,6 +14,10 @@
   &:disabled {
     background-color: $button-disabled-color;
   }
+
+  &--active > .button__icon::after {
+    transform: rotate(90deg);
+  }
 }
 
 .button--primary {

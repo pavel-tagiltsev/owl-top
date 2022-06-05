@@ -1,11 +1,6 @@
 mixin reviews-form
   - const {method, action, autocomplete} = attributes
-    form(
-      class!=attributes.class
-      method!=method
-      action!=action
-      autocomplete!=autocomplete
-    ).reviews-form.text--14.text--regular
+    form(class!=attributes.class method!=method action!=action autocomplete!=autocomplete).reviews-form
       +input('Напишите ваше имя')(name='name' type='text' placeholder='Имя').reviews-form__name
 
       +input('Напишите заголовок отзыва')(

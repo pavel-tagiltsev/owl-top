@@ -1,21 +1,21 @@
 .layout {
   display: grid;
   grid-template-areas:
-    ". aside main ."
+    ". main-header main-content ."
     "footer footer footer footer";
   grid-template-rows: 1fr auto;
   grid-template-columns: 1fr 230px minmax(280px, 1200px) 1fr;
   min-height: 100vh;
 
-  column-gap: 30px;
+  column-gap: $desktop-paddings;
 }
 
-.layout__aside {
-  grid-area: aside;
+.layout__main-header {
+  grid-area: main-header;
 }
 
-.layout__main {
-  grid-area: main;
+.layout__main-content {
+  grid-area: main-content;
 }
 
 .layout__footer {
@@ -26,16 +26,18 @@
 @include media("<desktop") {
   .layout {
     grid-template-areas:
-      ". main ."
+      ". main-header ."
+      ". main-content ."
       "footer footer footer";
+    grid-template-rows: auto 1fr auto;
     grid-template-columns: 1fr minmax(280px, 1200px) 1fr;
 
-    column-gap: 25px;
+    column-gap: $tablet-paddings;
   }
 }
 
 @include media("<tablet") {
   .layout {
-    column-gap: 20px;
+    column-gap: $mobile-paddings;
   }
 }

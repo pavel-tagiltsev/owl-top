@@ -1,0 +1,32 @@
+@import "./grid";
+
+.main-header__logo {
+  display: block;
+  width: 160px;
+  height: 45px;
+
+  border-radius: $border-radius-primary;
+
+  &:hover,
+  &:focus {
+    opacity: 0.9;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.main-header__burger {
+  display: none;
+}
+
+@include media("<desktop") {
+  .main-header {
+    margin-bottom: 20px;
+  }
+
+  .main-header__burger {
+    display: block;
+  }
+}

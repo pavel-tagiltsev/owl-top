@@ -1,0 +1,9 @@
+mixin menu
+  .menu
+    +logo.menu__logo
+
+    +button('', 'convex', 'cross')(aria-label='Закрыть меню').menu__close
+
+    +input('Поиск по сайту')(type='search' placeholder='Поиск...').menu__search
+
+    +navigation.menu__navigation

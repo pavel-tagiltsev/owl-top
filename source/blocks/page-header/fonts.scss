@@ -1,14 +1,14 @@
-.header__title {
+.page-header__title {
   font-weight: 500;
   font-size: 26px;
 }
 
-.header__drop {
+.page-header__drop {
   font-size: 12px;
 }
 
 @include media("<tablet") {
-  .header__title {
+  .page-header__title {
     font-size: 22px;
   }
 }

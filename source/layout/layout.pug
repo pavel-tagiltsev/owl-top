@@ -2,9 +2,10 @@ extends ../base
 
 block layout
   body.layout
-    +aside.layout__aside
+    +main-header.layout__main-header
 
-    block main
+    main(aria-label='Основной контент страницы').layout__main-content
+      block main
 
     +footer.layout__footer
 

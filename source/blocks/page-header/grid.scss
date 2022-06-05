@@ -1,28 +1,28 @@
-.header {
+.page-header {
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
 }
 
-.header__title {
+.page-header__title {
   grid-column: 1;
 }
 
-.header__sort-list {
+.page-header__sort-list {
   grid-column: 3;
 }
 
 @include media("<tablet") {
-  .header {
+  .page-header {
     grid-template-columns: auto;
     row-gap: 20px;
   }
 
-  .header__title {
+  .page-header__title {
     grid-row: 1;
   }
 
-  .header__sort-list {
+  .page-header__sort-list {
     grid-row: 2;
     grid-column: 1;
   }

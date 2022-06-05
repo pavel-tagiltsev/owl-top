@@ -1,0 +1,8 @@
+mixin main-header
+  header(class!=attributes.class aria-label='Главная навигация по сайту').main-header
+    a(href='/' aria-label='На главную странцу').main-header__logo
+      +logo
+
+    +button('', 'convex', 'burger')(aria-label='Открыть меню').main-header__burger
+
+    +menu.main-header__menu

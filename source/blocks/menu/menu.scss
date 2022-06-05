@@ -1,0 +1,49 @@
+@import "grid";
+
+.menu__logo,
+.menu__close {
+  display: none;
+}
+
+@include media("<desktop") {
+  .menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+
+    display: none;
+
+    padding: $tablet-paddings;
+    padding-top: 20px;
+    overflow-y: auto;
+
+    background: $page-color;
+
+    &--opened {
+      display: grid;
+    }
+  }
+
+  .menu__logo,
+  .menu__close {
+    display: block;
+  }
+
+  .menu__logo {
+    width: 160px;
+    height: 45px;
+  }
+
+  .menu__search {
+    width: 280px;
+  }
+}
+
+@include media("<tablet") {
+  .menu {
+    padding: $mobile-paddings;
+  }
+}

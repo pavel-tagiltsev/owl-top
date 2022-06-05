@@ -1,15 +1,10 @@
-const burger = document.querySelector('.main-header__burger')
-const close = document.querySelector('.menu__close')
-const menu = document.querySelector('.menu')
+import PopupToggler from '../../js/libs/PopupToggler.js'
 
-export default function MenuToggler() {
-  burger.addEventListener('click', () => {
-    menu.classList.add('menu--opened')
-    document.documentElement.style.overflow = 'hidden'
-  })
-
-  close.addEventListener('click', () => {
-    menu.classList.remove('menu--opened')
-    document.documentElement.style.overflow = ''
-  })
+export default function createMenu() {
+  new PopupToggler({
+    openBtnSelector: '[data-menu="open"]',
+    closeBtnSelector: '[data-menu="close"]',
+    popupSelector: '[data-menu="menu"]',
+    activeClass: 'menu--opened'
+  }).init()
 }

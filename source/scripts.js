@@ -1,6 +1,7 @@
-import Toggler from './blocks/navigation/navigation.js'
-import menuToggler from './blocks/menu/menu.js'
+import createMenu from './blocks/menu/menu.js'
+import createNavigation from './blocks/navigation/navigation.js'
 
-const navigation = document.querySelector('.navigation')
-navigation && new Toggler(navigation).init()
-menuToggler()
+document.addEventListener('DOMContentLoaded', () => {
+  createMenu()
+  createNavigation()
+})

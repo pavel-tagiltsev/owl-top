@@ -15,17 +15,11 @@
 @include media("<desktop") {
   .main-header {
     grid-template-rows: 1fr;
-    grid-template-columns: 1fr min-content;
+    grid-template-columns: 1fr;
   }
 
   .main-header__logo {
     grid-row: 1;
     grid-column: 1;
-  }
-
-  .main-header__burger {
-    grid-row: 1;
-    grid-column: 2;
-    justify-self: end;
   }
 }

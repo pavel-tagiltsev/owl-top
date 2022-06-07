@@ -1,7 +1,9 @@
 mixin course-footer
-  footer(class!=attributes.class).course-footer
-    +button('Узнать подробнее')(type='button').course-footer__button.course-footer__button--left
+  footer(class!='course-footer' + '')&attributes(attributes)
+    +button('Узнать подробнее')(
+      type='button'
+    ).course-footer__button.course-footer__button--left
     +button('Читать отзывы', 'ghost', 'arrow')(
       type='button'
-      data-reviews='trigger'
+      data-reviews-trigger=''
     ).course-footer__button.course-footer__button--right

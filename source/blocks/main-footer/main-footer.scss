@@ -1,15 +1,15 @@
 @import "grid";
 @import "fonts";
 
-.footer {
+.main-footer {
   background-color: $primary;
 }
 
-.footer__copyright {
+.main-footer__copyright {
   margin: 0;
 }
 
-.footer__nav {
+.main-footer__nav {
   margin: 0;
   padding: 0;
 
@@ -17,7 +17,7 @@
 }
 
 @include media("<desktop") {
-  .footer {
+  .main-footer {
     min-height: 150px;
     padding-top: 20px;
     padding-bottom: 30px;

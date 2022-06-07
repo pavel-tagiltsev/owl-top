@@ -1,11 +1,11 @@
 mixin main-header
-  header(class!=attributes.class aria-label='Главная навигация по сайту').main-header
+  header(class!='main-header' + '')&attributes(attributes)
     a(href='/' aria-label='На главную странцу').main-header__logo
       +logo
 
     +button('', 'convex', 'burger')(
       aria-label='Открыть меню'
-      data-menu='open'
+      data-menu-open=''
     ).main-header__burger
 
-    +menu.main-header__menu
+    +menu(data-menu='').main-header__menu

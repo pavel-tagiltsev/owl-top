@@ -5,7 +5,7 @@ include reviews-list/reviews-list
 include reviews-form/reviews-form
 
 mixin courses
-  ul.courses
+  ul(class!='courses' + '')&attributes(attributes)
     li.courses__item
       section.courses__course
         +course-header.courses__course-header
@@ -14,7 +14,7 @@ mixin courses
 
         +course-footer.courses__course-footer
 
-        div(data-reviews='reviews').courses__course-reviews
+        div(data-reviews-receiver).courses__course-reviews
           +reviews-list.courses__course-reviews-list
 
           +reviews-form(

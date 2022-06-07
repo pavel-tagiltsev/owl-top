@@ -1,6 +1,6 @@
 mixin reviews-list
   h3.visually-hidden Отзывы по курсу
-  ul(class!=attributes.class).reviews-list
+  ul(class!='reviews-list' + '')&attributes(attributes)
     li.reviews-list__item
       span.visually-hidden Первый отзыв
       figure.reviews-list__review

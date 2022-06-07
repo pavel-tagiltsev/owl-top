@@ -2,11 +2,11 @@ extends ../base
 
 block layout
   body.layout
-    +main-header.layout__main-header
+    +main-header(aria-label='Шапка сайта').layout__main-header
 
     main(aria-label='Основной контент страницы').layout__main-content
       block main
 
-    +footer.layout__footer
+    +main-footer(aria-label='Подвал сайта').layout__footer
 
     script(src='js/scripts.min.js')

@@ -1,5 +1,5 @@
 mixin fake-rating(rating = 1, label = 'Оценка')
-  div(class!=attributes.class + ' fake-rating')&attributes(attributes)
+  div(class!='fake-rating' + '')&attributes(attributes)
     span.fake-rating__label!= `${label}: ${rating} ${declOfNum(rating, ['балл', 'балла', 'баллов'])} из 5`
     each star, index in starsCount
       - const isActive = rating >= index + 1 ? 'fake-rating__star--active' : ''

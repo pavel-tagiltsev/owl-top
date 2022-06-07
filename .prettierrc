@@ -20,7 +20,7 @@
 
   "pugBracketSpacing": false,
   "pugBracketSameLine": false,
-  "pugPrintWidth": 100,
+  "pugPrintWidth": 80,
   "pugSami": false,
   "pugSingleQuote": true,
   "pugTabWidth": 2,
@@ -28,7 +28,7 @@
   "pugArrowPares": "always",
 
   "pugWrapAttributesThreshold": -1,
-  "pugEmptyAttributes": "none",
+  "pugEmptyAttributes": "as-is",
   "pugAttributeSeparator": "none",
   "pugCommentPreserveSpaces": "trim-all",
   "pugClassNotation": "literal",

@@ -1,0 +1,31 @@
+mixin input-group(label)
+  -
+    const {
+      type,
+      name,
+      placeholder,
+      disabled,
+      required = 'true',
+      spellcheck = 'true',
+    } = attributes
+
+  if type
+    label(class!=attributes.class).input-group
+      span.input-group__label= label
+      input(
+        name!=name
+        type!=type
+        placeholder!=placeholder
+        disabled!=disabled
+        required!=required
+      ).input-group__input
+
+  else
+    label(class!=attributes.class).input-group.input-group--textarea
+      span.input-group__label!= label
+      textarea(
+        name!=name
+        placeholder!=placeholder
+        spellcheck!=spellcheck
+        required!=required
+      ).input-group__input

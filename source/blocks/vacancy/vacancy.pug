@@ -1,5 +1,5 @@
 mixin vacancy
-  section(class!=attributes.class).vacancy
+  section(class!='vacancy' + '')&attributes(attributes)
     h2.vacancy__title Вакансии - Photoshop
       +drop('hh.ru', 'red').vacancy__drop
 

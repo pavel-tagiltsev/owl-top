@@ -69,21 +69,30 @@
 mixin thirdList(secondItem)
   ul.navigation__third-list
     each thirdItem in secondItem.thirdList
-      li(class!=thirdItem.opened ? 'navigation__third-item--opened' : '').navigation__third-item
+      li(
+        class!=thirdItem.opened ? 'navigation__third-item--opened' : ''
+      ).navigation__third-item
         a(href='/').navigation__third-title= thirdItem.thirdTitle
 
 mixin secondList(firstItem)
   ul.navigation__second-list
     each secondItem in firstItem.secondList
-      li(class!=secondItem.opened ? 'navigation__second-item--opened' : '').navigation__second-item
-        span(tabindex='0' data-accordion-trigger='2-level').navigation__second-title= secondItem.secondTitle
+      li(
+        class!=secondItem.opened ? 'navigation__second-item--opened' : ''
+      ).navigation__second-item
+        span(
+          tabindex='0'
+          data-accordion-trigger='2-level'
+        ).navigation__second-title= secondItem.secondTitle
         +thirdList(secondItem)
 
 mixin navigation
-  nav(class!=attributes.class data-nested-accordion).navigation
+  nav(class!='navigation' + '')&attributes(attributes)
     ul.navigation__first-list
       each firstItem in firstLists
-        li(class!=firstItem.opened ? 'navigation__first-item--opened' : '').navigation__first-item
+        li(
+          class!=firstItem.opened ? 'navigation__first-item--opened' : ''
+        ).navigation__first-item
           span(
             class!='navigation__first-title--' + firstItem.icon
             tabindex='0'

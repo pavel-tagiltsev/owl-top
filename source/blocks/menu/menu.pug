@@ -1,9 +1,12 @@
 mixin menu
-  div(data-menu='menu').menu
+  div(class!='menu' + '')&attributes(attributes)
     +logo.menu__logo
 
-    +button('', 'convex', 'cross')(aria-label='Закрыть меню' data-menu='close').menu__close
+    +button('', 'convex', 'cross')(
+      aria-label='Закрыть меню'
+      data-menu-close=''
+    ).menu__close
 
-    +input('Поиск по сайту')(type='search' placeholder='Поиск...').menu__search
+    +search.menu__search
 
-    +navigation.menu__navigation
+    +navigation(data-nested-accordion='').menu__navigation

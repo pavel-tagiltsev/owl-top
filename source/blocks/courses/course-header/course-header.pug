@@ -1,5 +1,5 @@
 mixin course-header
-  header(class!=attributes.class).course-header
+  header(class!='course-header' + '')&attributes(attributes)
     img(
       src='@img/skillbox-logo.png'
       alt='Логотип компании Скиллбокс'

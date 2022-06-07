@@ -1,5 +1,5 @@
 mixin header
-  header(class!=attributes.class).page-header
+  header(class!='page-header' + '')&attributes(attributes)
     h1.page-header__title Курсы по Photoshop
       +drop('10', 'gray').page-header__drop
     +sort.page-header__sort-list

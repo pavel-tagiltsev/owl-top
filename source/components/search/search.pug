@@ -1,0 +1,31 @@
+mixin search(label = 'Поиск по сайту')
+  -
+    const {
+        disabled,
+        name = 'search',
+        method = 'get',
+        action = '#',
+        autocomplete = 'off',
+        placeholder = 'Поиск...',
+        required = 'true',
+        role = 'search'
+      } = attributes
+
+  form(
+    class!=attributes.class
+    method=method
+    action!=action
+    autocomplete!=autocomplete
+    role!=role
+  ).search
+    +input-group(label)(
+      name!=name
+      type='search'
+      placeholder!=placeholder
+      disabled!=disabled
+      required!=required
+    ).search__input-group
+    +button('', 'primary', 'search')(
+      type='submit'
+      disabled!=disabled
+    ).search__button

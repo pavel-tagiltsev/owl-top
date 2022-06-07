@@ -1,3 +1,5 @@
+@import "fonts";
+
 .drop {
   display: inline-block;
   padding: 5px 10px;
@@ -5,34 +7,24 @@
   border-radius: 20px;
 
   &--gray {
-    color: $white-primary;
-
     background-color: #b3c0d9;
   }
 
   &--discount {
-    color: #1dc37e;
-
     background-color: #c8f8e4;
   }
 
   &--ghost {
-    color: $gray-primary;
-
     background-color: transparent;
     border: 1px solid $button-ghost-border-color;
   }
 
   &--primary {
-    color: $primary;
-
     background-color: transparent;
     border: 1px solid $primary;
   }
 
   &--red {
-    color: $white-primary;
-
     background-color: #de0000;
   }
 }

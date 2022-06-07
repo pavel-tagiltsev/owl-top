@@ -1,0 +1,31 @@
+.drop {
+  &--gray {
+    color: $white-primary;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  &--discount {
+    color: #1dc37e;
+    font-weight: 700;
+    font-size: 12px;
+  }
+
+  &--ghost {
+    color: $gray-primary;
+    font-weight: 500;
+    font-size: 12px;
+  }
+
+  &--primary {
+    color: $primary;
+    font-weight: 500;
+    font-size: 12px;
+  }
+
+  &--red {
+    color: $white-primary;
+    font-weight: 600;
+    font-size: 14px;
+  }
+}

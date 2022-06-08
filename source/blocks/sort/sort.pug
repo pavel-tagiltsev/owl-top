@@ -1,6 +1,9 @@
 mixin sort
-  ul(class!='sort' + '')&attributes(attributes)
-    li.sort__item.sort__item--chosed
+  ul#sort(class!='sort' + '')&attributes(attributes)
+    li(
+      data-sort-value='rating'
+      data-sort-order='ascending'
+    ).sort__item.sort__item--chosed
       button(type='button' aria-label='Сортировать по рейтингу').sort__button По рейтингу
-    li.sort__item
+    li(data-sort-value='price' data-sort-order='descending').sort__item
       button(type='button' aria-label='Сортировать по цене').sort__button По цене

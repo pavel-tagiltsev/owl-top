@@ -6,7 +6,13 @@ block varaiables
 block main
   .index-main
     +header.index-main__header
-    +courses.index-main__courses
+    ul#courses(
+      style='margin: 0; margin-bottom: 50px; padding: 0; list-style: none'
+    ).index-main__courses
+      +course(24000, 4)(data-price='24000' data-rating='4')
+      +course(30000, 4)(data-price='30000' data-rating='4')
+      +course(64000, 5)(data-price='64000' data-rating='5')
+      +course(150000, 3)(data-price='150000' data-rating='3')
     +vacancy.index-main__vacancy
     +advantages.index-main__advantages
     +skills.index-main__skills

@@ -1,4 +1,4 @@
-mixin fake-rating(rating = 1, label = 'Оценка')
+mixin fake-rating(rating = 0, label = 'Оценка')
   div(class!='fake-rating' + '')&attributes(attributes)
     span.fake-rating__label!= `${label}: ${rating} ${declOfNum(rating, ['балл', 'балла', 'баллов'])} из 5`
     each star, index in starsCount

@@ -1,0 +1,23 @@
+include course-header/course-header
+include course-content/course-content
+include course-footer/course-footer
+include reviews-list/reviews-list
+include reviews-form/reviews-form
+
+mixin course(price, rating)
+  li.course&attributes(attributes)
+    section.course__section
+      +course-header(price, rating).course__header
+
+      +course-content.course__content
+
+      +course-footer.course__footer
+
+      div(data-reviews-receiver).course__reviews
+        +reviews-list.course__reviews-list
+
+        +reviews-form(
+          method='post'
+          action='#'
+          autocomplete='off'
+        ).course__reviews-form

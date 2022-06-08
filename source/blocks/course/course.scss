@@ -5,15 +5,7 @@
 @import "./reviews-form/reviews-form";
 @import "grid";
 
-.courses {
-  margin: 0;
-  margin-bottom: 50px;
-  padding: 0;
-
-  list-style: none;
-}
-
-.courses__item {
+.course {
   margin-bottom: 30px;
 
   &:last-child {
@@ -21,7 +13,7 @@
   }
 }
 
-.courses__course {
+.course__section {
   padding: 30px;
 
   background-color: $white-primary;
@@ -29,19 +21,19 @@
   box-shadow: $shadow-primary;
 }
 
-.courses__course-header {
+.course__header {
   padding-bottom: 20px;
 
   border-bottom: 1px solid $button-ghost-border-color;
 }
 
-.courses__course-footer {
+.course__footer {
   padding-top: 20px;
 
   border-top: 1px solid #ebebeb;
 }
 
-.courses__course-reviews {
+.course__reviews {
   display: none;
   margin: 0 -30px -30px;
   padding: 30px;
@@ -54,14 +46,14 @@
   }
 }
 
-.courses__course-reviews-form {
+.course__reviews-form {
   padding-top: 20px;
 
   border-top: 1px solid #ebebeb;
 }
 
 @include media("<tablet") {
-  .courses__course {
+  .course {
     padding: 20px;
   }
 }

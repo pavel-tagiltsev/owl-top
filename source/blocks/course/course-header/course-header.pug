@@ -1,4 +1,4 @@
-mixin course-header
+mixin course-header(price, rating)
   header(class!='course-header' + '')&attributes(attributes)
     img(
       src='@img/skillbox-logo.png'
@@ -11,10 +11,10 @@ mixin course-header
 
     +hashtags(['Photoshop', 'Дизайн'], 'ghost').course-header__hashtags
 
-    p.course-header__term.course-header__term--price 24 000 ₽
+    p.course-header__term.course-header__term--price!= price + ' ₽'
       +drop('-10 000 ₽', 'discount').course-header__discount
     p.course-header__def.course-header__def--price цена
     p.course-header__term.course-header__term--credit 5 000 ₽/мес
     p.course-header__def.course-header__def--credit в кредит
-    +fake-rating(4, 'Средняя оценка').course-header__term.course-header__term--rating
+    +fake-rating(rating, 'Средняя оценка').course-header__term.course-header__term--rating
     p.course-header__def.course-header__def--rating 20 отзывов

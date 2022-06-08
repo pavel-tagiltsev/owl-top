@@ -19,12 +19,12 @@ export default class Sort {
     this.onTriggerClick = this.onTriggerClick.bind(this)
   }
 
-  highlightChosedTrigger(trigger) {
+  highlightChosedTrigger(chosedTrigger) {
     this.triggers.forEach((trigger) => {
       trigger.classList.remove(this.activeTriggerClass)
     })
 
-    trigger
+    chosedTrigger
       .closest(`[${VALUE_ATTRIBUTE}]`)
       .classList.add(this.activeTriggerClass)
   }
@@ -46,12 +46,12 @@ export default class Sort {
     siblingAnchor[insertType](clone)
   }
 
-  sortItems(trigger) {
-    const sortableValue = trigger
+  sortItems(chosedTrigger) {
+    const sortableValue = chosedTrigger
       .closest(`[${VALUE_ATTRIBUTE}]`)
       .getAttribute(VALUE_ATTRIBUTE)
 
-    const sortableOrder = trigger
+    const sortableOrder = chosedTrigger
       .closest(`[${ORDER_ATTRIBUTE}]`)
       .getAttribute(ORDER_ATTRIBUTE)
 

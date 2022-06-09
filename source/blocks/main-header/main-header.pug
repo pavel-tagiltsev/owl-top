@@ -3,9 +3,8 @@ mixin main-header
     a(href='/' aria-label='На главную странцу').main-header__logo
       +logo
 
-    +button('', 'convex', 'burger')(
+    +button('', 'convex', 'burger')#menu-open(
       aria-label='Открыть меню'
-      data-menu-open=''
     ).main-header__burger
 
-    +menu(data-menu='').main-header__menu
+    +menu#menu.main-header__menu

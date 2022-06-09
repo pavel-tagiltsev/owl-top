@@ -1,6 +1,6 @@
 export default class Accordion {
-  constructor({selector, activeClasses}) {
-    this.accordion = document.querySelector(selector)
+  constructor({container, activeClasses}) {
+    this.accordion = document.querySelector(container)
 
     this.accordions = activeClasses.map((activeClass, index) => {
       return {

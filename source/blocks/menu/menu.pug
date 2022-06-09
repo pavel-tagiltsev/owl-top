@@ -2,11 +2,10 @@ mixin menu
   div(class!='menu' + '')&attributes(attributes)
     +logo.menu__logo
 
-    +button('', 'convex', 'cross')(
+    +button('', 'convex', 'cross')#menu-close(
       aria-label='Закрыть меню'
-      data-menu-close=''
     ).menu__close
 
     +search.menu__search
 
-    +navigation(data-nested-accordion='').menu__navigation
+    +navigation#accordion.menu__navigation

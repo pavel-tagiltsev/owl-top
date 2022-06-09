@@ -5,14 +5,14 @@ import Sort from './js/modules/Sort.js'
 
 document.addEventListener('DOMContentLoaded', () => {
   new Modal({
-    openBtnSelector: '[data-menu-open]',
-    closeBtnSelector: '[data-menu-close]',
-    modalSelector: '[data-menu]',
+    openBtnSelector: '#menu-open',
+    closeBtnSelector: '#menu-close',
+    modalSelector: '#menu',
     activeClass: 'menu--opened'
   }).init()
 
   new Accordion({
-    selector: '[data-nested-accordion]',
+    container: '#accordion',
     activeClasses: [
       'navigation__first-item--opened',
       'navigation__second-item--opened'

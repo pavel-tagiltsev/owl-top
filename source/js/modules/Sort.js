@@ -71,6 +71,13 @@ export default class Sort {
   }
 
   onTriggerClick(evt) {
+    if (
+      !evt.target.closest(`[${VALUE_ATTRIBUTE}]`) ||
+      !evt.target.closest(`[${VALUE_ATTRIBUTE}]`)
+    ) {
+      return
+    }
+
     this.sortItems(evt.target)
     this.highlightChosedTrigger(evt.target)
   }

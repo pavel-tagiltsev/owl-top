@@ -1,10 +1,10 @@
-export default class NestedAccordion {
+export default class Accordion {
   constructor({selector, activeClasses}) {
-    this.nestedAccordion = document.querySelector(selector)
+    this.accordion = document.querySelector(selector)
 
     this.accordions = activeClasses.map((activeClass, index) => {
       return {
-        triggers: this.nestedAccordion.querySelectorAll(
+        triggers: this.accordion.querySelectorAll(
           `[data-accordion-trigger="${index + 1}-level"]`
         ),
         activeClass
@@ -51,12 +51,12 @@ export default class NestedAccordion {
   }
 
   init() {
-    this.nestedAccordion.addEventListener('click', this.onClick)
-    this.nestedAccordion.addEventListener('keydown', this.onKeyDown)
+    this.accordion.addEventListener('click', this.onClick)
+    this.accordion.addEventListener('keydown', this.onKeyDown)
   }
 
   destroy() {
-    this.nestedAccordion.removeEventListener('click', this.onClick)
-    this.nestedAccordion.removeEventListener('keydown', this.onKeyDown)
+    this.accordion.removeEventListener('click', this.onClick)
+    this.accordion.removeEventListener('keydown', this.onKeyDown)
   }
 }

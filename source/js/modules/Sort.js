@@ -11,9 +11,11 @@ const SORT_ORDERS = {
 export default class Sort {
   constructor({itemsContainer, triggersContainer, activeTriggerClass}) {
     this.itemsContainer = document.querySelector(itemsContainer)
-    this.items = Array.from(this.itemsContainer.children)
     this.triggersContainer = document.querySelector(triggersContainer)
+
+    this.items = Array.from(this.itemsContainer.children)
     this.triggers = Array.from(this.triggersContainer.children)
+
     this.activeTriggerClass = activeTriggerClass
 
     this.onTriggerClick = this.onTriggerClick.bind(this)

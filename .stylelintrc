@@ -122,7 +122,11 @@
           "rules",
           "each",
           "while",
-          "if"
+          "if",
+          "function",
+          "return",
+          "else",
+          "warn"
         ]
       }
     ],

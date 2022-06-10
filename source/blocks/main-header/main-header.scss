@@ -30,7 +30,7 @@
     position: fixed;
     top: 20px;
     right: $tablet-paddings;
-    z-index: 1;
+    z-index: z("menu-open");
 
     display: flex;
   }

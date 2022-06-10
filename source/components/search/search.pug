@@ -18,14 +18,14 @@ mixin search(label = 'Поиск по сайту')
     autocomplete!=autocomplete
     role!=role
   ).search
-    +input-group(label)(
+    +input-group(label, icon="true")(
       name!=name
       type='search'
       placeholder!=placeholder
       disabled!=disabled
       required!=required
     ).search__input-group
-    +button('', 'primary', 'search')(
+    +icon-button('small', 'primary', 'search', 'primary-radius')(
       type='submit'
       disabled!=disabled
     ).search__button

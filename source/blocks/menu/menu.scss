@@ -1,6 +1,11 @@
 @import "grid";
 
-.menu__logo,
+.menu__logo {
+  display: none;
+  width: 160px;
+  height: 45px;
+}
+
 .menu__close {
   display: none;
 }
@@ -27,14 +32,12 @@
     }
   }
 
-  .menu__logo,
-  .menu__close {
+  .menu__logo {
     display: block;
   }
 
-  .menu__logo {
-    width: 160px;
-    height: 45px;
+  .menu__close {
+    display: flex;
   }
 
   .menu__search {

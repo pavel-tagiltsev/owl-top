@@ -1,7 +1,4 @@
 .button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 10px;
 
   font-weight: 400;
@@ -61,37 +58,6 @@
   }
 }
 
-.button--convex {
-  width: 40px;
-  height: 40px;
-
-  color: $white-primary;
-
-  background-color: $white-primary;
-  border: none;
-  border-radius: 10px;
-  box-shadow: $shadow-primary;
-
-  & > .button__icon::after {
-    filter: invert(60%) sepia(72%) saturate(4544%) hue-rotate(237deg) brightness(97%) contrast(104%);
-  }
-
-  &:hover,
-  &:focus {
-    color: $white-primary;
-
-    background-color: $primary;
-
-    & > .button__icon::after {
-      filter: none;
-    }
-  }
-
-  &:active {
-    background-color: rgba($primary, 0.7);
-  }
-}
-
 .button__icon {
   position: relative;
 
@@ -107,7 +73,7 @@
 
 
   &--arrow::after {
-    top: 4px;
+    top: 5px;
     right: 0;
 
     width: 10px;
@@ -116,27 +82,20 @@
     background-image: url("../images/stack-sprite.svg#arrow");
   }
 
+  &--big-arrow-up {
+    width: 20px;
+    height: 20px;
+
+    background-image: url("../images/stack-sprite.svg#arrow");
+    transform: rotate(45deg);
+  }
+
   &--search::after {
-    top: -7.5px;
     right: 2.5px;
 
     width: 15px;
     height: 15px;
 
     background-image: url("../images/stack-sprite.svg#search");
-  }
-
-  &--burger::after {
-    width: 20px;
-    height: 17px;
-
-    background-image: url("../images/stack-sprite.svg#burger");
-  }
-
-  &--cross::after {
-    width: 20px;
-    height: 17px;
-
-    background-image: url("../images/stack-sprite.svg#cross");
   }
 }

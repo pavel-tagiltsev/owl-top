@@ -7,7 +7,7 @@ export default class Toggler {
     targetActiveClass
   }) {
     this.container = container
-    this.triggers = this.container.querySelectorAll(trigger)
+    this.trigger = this.container.querySelector(trigger)
     this.target = this.container.querySelector(target)
     this.triggerActiveClass = triggerActiveClass
     this.targetActiveClass = targetActiveClass
@@ -21,9 +21,7 @@ export default class Toggler {
   }
 
   init() {
-    this.triggers.forEach((trigger) => {
-      trigger.addEventListener('click', this.toggle)
-    })
+    this.trigger.addEventListener('click', this.toggle)
   }
 
   destroy() {

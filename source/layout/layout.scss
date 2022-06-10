@@ -1,4 +1,6 @@
 .layout {
+  position: relative;
+
   display: grid;
   grid-template-areas:
     ". main-header main-content ."

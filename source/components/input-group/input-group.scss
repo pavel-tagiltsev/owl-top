@@ -27,6 +27,10 @@
 
   box-shadow: $shadow-primary;
 
+  &--with-icon {
+    padding-right: 35px;
+  }
+
   &::placeholder {
     color: $input-placeholder-color;
   }

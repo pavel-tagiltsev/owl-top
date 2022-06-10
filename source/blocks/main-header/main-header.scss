@@ -32,7 +32,7 @@
     right: $tablet-paddings;
     z-index: 1;
 
-    display: block;
+    display: flex;
   }
 }
 
@@ -43,6 +43,6 @@
     right: $mobile-paddings;
     z-index: 1;
 
-    display: block;
+    display: flex;
   }
 }

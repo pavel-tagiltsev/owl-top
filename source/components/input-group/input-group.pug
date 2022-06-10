@@ -1,4 +1,4 @@
-mixin input-group(label)
+mixin input-group(label, icon)
   -
     const {
       type,
@@ -16,6 +16,7 @@ mixin input-group(label)
         name!=name
         type!=type
         placeholder!=placeholder
+        class!=icon ? 'input-group__input--with-icon' : ''
         disabled!=disabled
         required!=required
       ).input-group__input

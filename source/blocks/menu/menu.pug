@@ -2,7 +2,7 @@ mixin menu
   div(class!='menu' + '')&attributes(attributes)
     +logo.menu__logo
 
-    +button('', 'convex', 'cross')#menu-close(
+    +icon-button('big', 'ghost', 'cross')#menu-close(
       aria-label='Закрыть меню'
     ).menu__close
 

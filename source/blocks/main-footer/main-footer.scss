@@ -16,10 +16,27 @@
   list-style: none;
 }
 
+.main-footer__button-up {
+  position: fixed;
+  right: $desktop-paddings;
+  bottom: 20px;
+  z-index: 1;
+}
+
 @include media("<desktop") {
   .main-footer {
     min-height: 150px;
     padding-top: 20px;
     padding-bottom: 30px;
+  }
+
+  .main-footer__button-up {
+    right: $tablet-paddings;
+  }
+}
+
+@include media("<tablet") {
+  .main-footer__button-up {
+    right: $mobile-paddings;
   }
 }

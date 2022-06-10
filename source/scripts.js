@@ -2,8 +2,11 @@ import Modal from './js/modules/Modal.js'
 import Accordion from './js/modules/Accordion.js'
 import Toggler from './js/modules/Toggler.js'
 import Sort from './js/modules/Sort.js'
+import ScrollUp from './js/modules/ScrollUp.js'
 
 document.addEventListener('DOMContentLoaded', () => {
+  new ScrollUp('#scroll-up').init()
+
   new Modal({
     openBtnSelector: '#menu-open',
     closeBtnSelector: '#menu-close',

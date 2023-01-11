@@ -1,8 +1,0 @@
-mixin fake-rating(rating = 0, label = 'Оценка')
-  div(class!='fake-rating' + '')&attributes(attributes)
-    span.fake-rating__label!= `${label}: ${rating} ${declOfNum(rating, ['балл', 'балла', 'баллов'])} из 5`
-    each star, index in starsCount
-      - const isActive = rating >= index + 1 ? 'fake-rating__star--active' : ''
-
-      svg(class!=isActive).fake-rating__star
-        use(xlink:href='@img/symbol-sprite.svg#star')

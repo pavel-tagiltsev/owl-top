@@ -2,7 +2,7 @@
   display: grid;
   grid-template-rows: 36px 76px auto;
   grid-template-columns: 220px  220px 1fr auto;
-  align-items: start;
+  align-items: flex-start;
 
   row-gap: 20px;
 

@@ -2,7 +2,7 @@
   display: grid;
   grid-template-rows: auto auto;
   grid-template-columns: auto auto 1fr auto auto auto;
-  align-items: start;
+  align-items: flex-start;
 
   column-gap: 30px;
 }

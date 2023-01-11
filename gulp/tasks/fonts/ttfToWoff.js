@@ -1,4 +1,4 @@
-import fonter from 'gulp-fonter'
+import ttf2woff from 'gulp-ttf2woff'
 import ttf2woff2 from 'gulp-ttf2woff2'
 
 export default function ttfToWoff() {
@@ -7,11 +7,7 @@ export default function ttfToWoff() {
 
   return src(`${source.fonts}*.ttf`)
     .pipe(app.errorHandler('TTF_TO_WOFF'))
-    .pipe(
-      fonter({
-        formats: ['woff']
-      })
-    )
+    .pipe(ttf2woff())
     .pipe(dest(build.fonts))
     .pipe(src(`${source.fonts}*.ttf`))
     .pipe(ttf2woff2())

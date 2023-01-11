@@ -3,3 +3,14 @@ build
 .vscode
 .zip
 .DS_Store
+.editorconfig
+.eslintignore
+.eslintrc
+.prettierignore
+.prettierrc
+.stylelintignore
+.stylelintrc
+.gulpfile.js
+source
+package.json
+package-lock.json

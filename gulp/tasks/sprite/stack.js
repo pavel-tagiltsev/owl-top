@@ -6,7 +6,14 @@ const stackConfig = {
       transform: [
         {
           svgo: {
-            plugins: svgoPlugins
+            plugins: [
+              {
+                name: 'preset-default',
+                params: {
+                  overrides: svgoPlugins
+                }
+              }
+            ]
           }
         }
       ]

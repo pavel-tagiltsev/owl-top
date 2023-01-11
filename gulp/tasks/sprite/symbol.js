@@ -6,8 +6,18 @@ const symbolConfig = {
       {
         svgo: {
           plugins: [
-            ...svgoPlugins,
-            ...[{removeAttrs: {attrs: '(fill|stroke|style)'}}]
+            {
+              name: 'preset-default',
+              params: {
+                overrides: svgoPlugins
+              }
+            },
+            {
+              name: 'removeAttrs',
+              params: {
+                attrs: '(fill|stroke|style)'
+              }
+            }
           ]
         }
       }

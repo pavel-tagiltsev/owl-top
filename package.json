@@ -1,7 +1,7 @@
 {
-  "name": "gulp-bolierplate",
+  "name": "owl-top",
   "version": "1.0.0",
-  "description": "gulp + webpack bolierplate",
+  "description": "Study project",
   "main": "gulpfile.js",
   "type": "module",
   "scripts": {
@@ -19,7 +19,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pavel-tagiltsev/gulp-bolierplate.git"
+    "url": "https://github.com/pavel-tagiltsev/owl-top.git"
   },
   "keywords": [
     "gulp",
@@ -27,8 +27,7 @@
     "js",
     "css",
     "scss",
-    "html",
-    "bolierplate"
+    "html"
   ],
   "browserslist": [
     "last 3 versions",
@@ -50,7 +49,7 @@
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-if": "^3.0.0",
     "gulp-imagemin": "^8.0.0",
-    "gulp-load-plugins": "^2.0.7",
+    "gulp-load-plugins": "^2.0.8",
     "gulp-newer": "^1.4.0",
     "gulp-notify": "^4.0.0",
     "gulp-plumber": "^1.2.1",
